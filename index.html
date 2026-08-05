@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PD MontaNIKA Novi Sad — planinarsko društvo</title>
+<meta name="description" content="Planinarsko društvo „MontaNIKA” Novi Sad — akcije, članarine, godišnji plan, obuke i kontakt. Planina je pravac, MontaNIKA je smer.">
+<link rel="icon" href="https://montanika.rs/wp-content/uploads/2025/08/cropped-logoravni-removebg-preview-e1755036119190.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Source+Sans+3:ital,wght@0,300..700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FAF8F3; color: #171A14; font-family: 'Source Sans 3', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #A57F13; text-decoration: none; }
+  a:hover { color: #171A14; }
+  button { font-family: inherit; }
+  [data-track]::-webkit-scrollbar { display: none; height: 0; }
+  [data-track] { scrollbar-width: none; }
+
+  @media (max-width: 900px) {
+    section { padding-left: 20px !important; padding-right: 20px !important; }
+    nav > div { padding-left: 18px !important; padding-right: 18px !important; }
+    footer { padding-left: 20px !important; padding-right: 20px !important; }
+  }
+  @media (max-width: 640px) {
+    section { padding-top: 56px !important; padding-bottom: 56px !important; }
+    section:first-of-type { padding-top: 118px !important; }
+  }
+  @keyframes mn-fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#FAF8F3">
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:60;height:82px;display:flex;align-items:center;transition:background .35s, box-shadow .35s">
+  <div style="position:absolute;inset:0;background:#FAF8F3;box-shadow:0 1px 0 rgba(23,26,20,.08);opacity:{{ navSolid }};transition:opacity .35s"></div>
+  <div style="position:relative;width:100%;max-width:1320px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#/" style="display:flex;align-items:center;gap:12px;flex:0 0 auto">
+      <img src="https://montanika.rs/wp-content/uploads/2025/08/cropped-logoravni-removebg-preview-e1755036119190.png" alt="PD MontaNIKA" style="height:52px;width:auto;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end;color:{{ navFg }}">
+      <a href="#/" onClick="{{ goHomeTop }}" style="color:inherit;font:500 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;border-radius:2px" style-hover="background:rgba(199,154,31,.16)">Naslovna</a>
+
+      <div onMouseEnter="{{ openAbout }}" onMouseLeave="{{ closeMenu }}" style="position:relative">
+        <a href="#/?a=kako-smo-nastali" style="color:inherit;font:500 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;border-radius:2px;display:flex;align-items:center;gap:7px" style-hover="background:rgba(199,154,31,.16)">O nama <span style="font-size:9px;opacity:.8">▼</span></a>
+        <sc-if value="{{ menuAbout }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:100%;right:0;min-width:290px;background:#171A14;padding:10px;border-top:2px solid #C79A1F;border-radius:0 0 12px 12px;box-shadow:0 24px 48px rgba(0,0,0,.28);display:flex;flex-direction:column;animation:mn-fade .18s ease">
+            <a href="#/?a=kako-smo-nastali" style="color:#F2EFE6;font:400 13px/1.3 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:13px 14px" style-hover="background:#C79A1F;color:#171A14">Kako smo nastali</a>
+            <a href="#/?a=nasi-vodici" style="color:#F2EFE6;font:400 13px/1.3 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:13px 14px" style-hover="background:#C79A1F;color:#171A14">Naši vodiči</a>
+            <a href="#/?a=akcije-prepoznatljivost" style="color:#F2EFE6;font:400 13px/1.3 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:13px 14px" style-hover="background:#C79A1F;color:#171A14">Akcije po kojima nas prepoznaju</a>
+            <a href="#/?a=mi-u-medijima" style="color:#F2EFE6;font:400 13px/1.3 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:13px 14px" style-hover="background:#C79A1F;color:#171A14">Mi u medijima</a>
+          </div>
+        </sc-if>
+      </div>
+
+      <div onMouseEnter="{{ openActions }}" onMouseLeave="{{ closeMenu }}" style="position:relative">
+        <a href="#/?a=aktuelne-akcije" style="color:inherit;font:500 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;border-radius:2px;display:flex;align-items:center;gap:7px" style-hover="background:rgba(199,154,31,.16)">Naše akcije <span style="font-size:9px;opacity:.8">▼</span></a>
+        <sc-if value="{{ menuActions }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:100%;right:0;min-width:250px;background:#171A14;padding:10px;border-top:2px solid #C79A1F;border-radius:0 0 12px 12px;box-shadow:0 24px 48px rgba(0,0,0,.28);display:flex;flex-direction:column;animation:mn-fade .18s ease">
+            <a href="#/godisnji-plan" style="color:#F2EFE6;font:400 13px/1.3 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:13px 14px" style-hover="background:#C79A1F;color:#171A14">Godišnji plan akcija</a>
+            <a href="#/?a=aktuelne-akcije" style="color:#F2EFE6;font:400 13px/1.3 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:13px 14px" style-hover="background:#C79A1F;color:#171A14">Sledeće akcije</a>
+          </div>
+        </sc-if>
+      </div>
+
+      <a href="#/obavestenja" style="color:inherit;font:500 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;border-radius:2px" style-hover="background:rgba(199,154,31,.16)">Obaveštenja</a>
+      <a href="#/postani-clan" style="color:inherit;font:500 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;border-radius:2px" style-hover="background:rgba(199,154,31,.16)">Postani član</a>
+      <a href="#/galerija" style="color:inherit;font:500 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;border-radius:2px" style-hover="background:rgba(199,154,31,.16)">Galerija</a>
+      <a href="#/kontakt" style="color:inherit;font:500 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;border-radius:2px" style-hover="background:rgba(199,154,31,.16)">Kontakt</a>
+      <a href="#/utisci" style="margin-left:8px;background:#C79A1F;color:#171A14;font:600 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:14px 20px;border-radius:6px" style-hover="background:#171A14;color:#F7F4EA">Utisci naših članova</a>
+    </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleDrawer }}" aria-label="Meni" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:0 10px;background:transparent;border:0;cursor:pointer">
+        <span style="display:block;flex:0 0 2px;width:100%;height:2px;border-radius:1px;background:{{ navFg }}"></span>
+        <span style="display:block;flex:0 0 2px;width:100%;height:2px;border-radius:1px;background:{{ navFg }}"></span>
+        <span style="display:block;flex:0 0 2px;width:100%;height:2px;border-radius:1px;background:{{ navFg }}"></span>
+      </button>
+    </sc-if>
+  </div>
+</nav>
+
+<sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:70;background:#171A14;display:flex;flex-direction:column;padding:96px 22px 40px;overflow-y:auto;animation:mn-fade .2s ease">
+    <button onClick="{{ closeDrawer }}" aria-label="Zatvori meni" style="position:absolute;top:20px;right:18px;width:46px;height:46px;border-radius:50%;background:transparent;border:1px solid rgba(247,244,234,.35);color:#F7F4EA;font-size:20px;cursor:pointer">✕</button>
+    <a href="#/" onClick="{{ goHomeTop }}" style="color:#F7F4EA;font:500 17px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:18px 4px;border-bottom:1px solid rgba(247,244,234,.14)">Naslovna</a>
+    <button onClick="{{ toggleSubAbout }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;background:transparent;border:0;border-bottom:1px solid rgba(247,244,234,.14);color:#F7F4EA;font:500 17px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:18px 4px;text-align:left;cursor:pointer">O nama <span style="font-size:10px;color:#D8B34A">{{ subAboutArrow }}</span></button>
+    <sc-if value="{{ subAboutOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;padding:8px 0 12px 8px;animation:mn-fade .18s ease">
+      <a href="#/?a=kako-smo-nastali" onClick="{{ closeDrawer }}" style="color:rgba(247,244,234,.8);font:400 13px/1.35 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 4px 12px 18px;border-left:1px solid rgba(199,154,31,.5)">Kako smo nastali</a>
+      <a href="#/?a=nasi-vodici" onClick="{{ closeDrawer }}" style="color:rgba(247,244,234,.8);font:400 13px/1.35 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 4px 12px 18px;border-left:1px solid rgba(199,154,31,.5)">Naši vodiči</a>
+      <a href="#/?a=akcije-prepoznatljivost" onClick="{{ closeDrawer }}" style="color:rgba(247,244,234,.8);font:400 13px/1.35 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 4px 12px 18px;border-left:1px solid rgba(199,154,31,.5)">Akcije po kojima nas prepoznaju</a>
+      <a href="#/?a=mi-u-medijima" onClick="{{ closeDrawer }}" style="color:rgba(247,244,234,.8);font:400 13px/1.35 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 4px 12px 18px;border-left:1px solid rgba(199,154,31,.5)">Mi u medijima</a>
+      </div>
+    </sc-if>
+    <button onClick="{{ toggleSubActions }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;background:transparent;border:0;border-bottom:1px solid rgba(247,244,234,.14);color:#F7F4EA;font:500 17px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:18px 4px;text-align:left;cursor:pointer">Naše akcije <span style="font-size:10px;color:#D8B34A">{{ subActionsArrow }}</span></button>
+    <sc-if value="{{ subActionsOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;padding:8px 0 12px 8px;animation:mn-fade .18s ease">
+      <a href="#/godisnji-plan" onClick="{{ closeDrawer }}" style="color:rgba(247,244,234,.8);font:400 13px/1.35 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 4px 12px 18px;border-left:1px solid rgba(199,154,31,.5)">Godišnji plan akcija</a>
+      <a href="#/?a=aktuelne-akcije" onClick="{{ closeDrawer }}" style="color:rgba(247,244,234,.8);font:400 13px/1.35 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 4px 12px 18px;border-left:1px solid rgba(199,154,31,.5)">Sledeće akcije</a>
+      </div>
+    </sc-if>
+    <a href="#/obavestenja" onClick="{{ closeDrawer }}" style="color:#F7F4EA;font:500 17px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:18px 4px;border-bottom:1px solid rgba(247,244,234,.14)">Obaveštenja</a>
+    <a href="#/postani-clan" onClick="{{ closeDrawer }}" style="color:#F7F4EA;font:500 17px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:18px 4px;border-bottom:1px solid rgba(247,244,234,.14)">Postani član</a>
+    <a href="#/galerija" onClick="{{ closeDrawer }}" style="color:#F7F4EA;font:500 17px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:18px 4px;border-bottom:1px solid rgba(247,244,234,.14)">Galerija</a>
+    <a href="#/kontakt" onClick="{{ closeDrawer }}" style="color:#F7F4EA;font:500 17px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:18px 4px;border-bottom:1px solid rgba(247,244,234,.14)">Kontakt</a>
+    <a href="#/utisci" onClick="{{ closeDrawer }}" style="margin-top:26px;text-align:center;background:#C79A1F;color:#171A14;font:600 14px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:20px;border-radius:8px">Utisci naših članova</a>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div>
+  <section style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden">
+    <img src="images/hero.jpg" alt="Planinski vrh iznad oblaka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,15,10,.52) 0%,rgba(12,15,10,.24) 42%,rgba(12,15,10,.74) 100%)"></div>
+    <div style="position:relative;text-align:center;padding:140px 32px 120px;max-width:1100px">
+      <div style="font:500 13px/1 Oswald,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#D8B34A;margin-bottom:26px">Novi Sad · Fruška gora · Svet</div>
+      <h1 style="margin: 0; font: 700 clamp(42px,6.4vw,92px)/1.02 Oswald,sans-serif; letter-spacing: .01em; color: #FFF; text-wrap: balance">Planinarsko društvo<br>„MontaNIKA” Novi Sad</h1>
+      <p style="margin:30px auto 0;max-width:640px;font:italic 300 clamp(19px,2vw,26px)/1.5 'Source Sans 3',sans-serif;color:rgba(255,255,255,.9)">„Planina je pravac. MontaNIKA je smer!”</p>
+      <div style="margin-top:46px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScO43rEtSI9UO-opovrFHafdoedJW5Cp3XlRabayEwQeMAPFg/viewform?usp=header" target="_blank" rel="noopener" style="background:#C79A1F;color:#171A14;font:600 14px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:19px 34px;border-radius:8px" style-hover="background:#F7F4EA">Učlani se online!</a>
+        <a href="#/?a=aktuelne-akcije" style="border:1px solid rgba(255,255,255,.55);color:#FFF;font:500 14px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:19px 34px;border-radius:8px" style-hover="background:rgba(255,255,255,.14)">Sledeće akcije</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kako-smo-nastali" style="padding:110px 32px;scroll-margin-top:96px">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:70px;align-items:start">
+      <div>
+        <div style="font: 500 12px/1 Oswald,sans-serif; letter-spacing: .3em; text-transform: uppercase; color: #A57F13; margin-bottom: 18px">O nama</div>
+        <h2 style="margin: 0 0 26px; font: 700 clamp(34px,4vw,54px)/1.05 Oswald,sans-serif; letter-spacing: .01em; text-transform: uppercase">Kako smo nastali?</h2>
+        <div style="width:64px;height:3px;background:#C79A1F;margin-bottom:30px"></div>
+        <p style="margin:0 0 18px;font:400 18px/1.7 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Ideja o osnivanju planinarskog društva MontaNIKA rodila se iz ljubavi prema prirodi, planinama i avanturi. Nekolicina entuzijasta, zaljubljenika u pešačenje i istraživanje netaknute prirode, počela je neformalno da organizuje izlete i pohode na planine širom Srbije i regiona.</p>
+        <p style="margin:0 0 18px;font:400 18px/1.7 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Vremenom, ti susreti su prerasli u pravu zajednicu prijatelja, gde su se delile priče sa staza, saveti o opremi i planiranju, kao i nezaboravni trenuci provedeni na vrhovima. Želja da se ova energija i zajedništvo prenesu na što veći broj ljudi dovela je do osnivanja planinarskog društva MontaNIKA.</p>
+        <p style="margin:0 0 18px;font:400 18px/1.7 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Naša misija je da inspirišemo ljude da izađu iz gradske vreve, upoznaju lepotu planina i uživaju u zdravom, aktivnom načinu života. Kroz organizovane pohode, edukativne radionice i druženja, MontaNIKA povezuje ljude sa prirodom – i jedne s drugima.</p>
+        <p style="margin:0;font:600 19px/1.6 'Source Sans 3',sans-serif;color:#171A14">Od prvog koraka na stazi do osvajanja vrhova, MontaNIKA je tu da vas podseti: planina nije samo cilj, ona je put koji nas menja.</p>
+      </div>
+      <div style="display:grid;gap:16px">
+        <div data-zoom="" onClick="{{ openZoom }}" style="height:340px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Slika — društvo na stazi</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="border:1px solid #E2DCCB;padding:26px 22px;background:#FFF">
+            <div style="font:700 40px/1 Oswald,sans-serif;color:#C79A1F">50+</div>
+            <div style="margin-top:8px;font:400 14px/1.4 'Source Sans 3',sans-serif;color:#5A5F52">akcija godišnje</div>
+          </div>
+          <div style="border:1px solid #E2DCCB;padding:26px 22px;background:#FFF">
+            <div style="font:700 40px/1 Oswald,sans-serif;color:#C79A1F">2</div>
+            <div style="margin-top:8px;font:400 14px/1.4 'Source Sans 3',sans-serif;color:#5A5F52">licencirana vodiča</div>
+          </div>
+        </div>
+        <a href="https://invite.viber.com/?g2=AQBr9qAj1MiHKFJ9b7H2fnfUiMkQcGag6ifg1bBSuuPWAhX0Xf%2FpuRqcljYsVesU" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;background:#C79A1F;color:#171A14;font:600 13px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:19px 24px;border-radius:8px" style-hover="background:#171A14;color:#F7F4EA">Pridruži se našoj Viber zajednici</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="nasi-vodici" style="padding:100px 32px;background:#171A14;color:#F7F4EA;scroll-margin-top:82px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:44px">
+        <div>
+          <div style="font: 500 12px/1 Oswald,sans-serif; letter-spacing: .3em; text-transform: uppercase; color: #D8B34A; margin-bottom: 16px">O nama</div>
+          <h2 style="margin: 0; font: 700 clamp(34px,4vw,54px)/1.05 Oswald,sans-serif; letter-spacing: .01em; text-transform: uppercase">Naši vodiči</h2>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button onClick="{{ scrollPrev }}" data-scope="guides" style="width:52px;height:52px;border-radius:50%;border:1px solid rgba(247,244,234,.3);background:transparent;color:#F7F4EA;font-size:20px;cursor:pointer" style-hover="background:#C79A1F;color:#171A14;border-color:#C79A1F">‹</button>
+          <button onClick="{{ scrollNext }}" data-scope="guides" style="width:52px;height:52px;border-radius:50%;border:1px solid rgba(247,244,234,.3);background:transparent;color:#F7F4EA;font-size:20px;cursor:pointer" style-hover="background:#C79A1F;color:#171A14;border-color:#C79A1F">›</button>
+        </div>
+      </div>
+      <div data-carousel="guides" style="position:relative">
+        <div data-track="" data-zoom-group="vodici" style="display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:14px">
+          <article style="flex:0 0 100%;scroll-snap-align:center;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px;align-items:center">
+            <div data-zoom="" onClick="{{ openZoom }}" style="order:{{ guideImgOrder }};min-height:440px;background:repeating-linear-gradient(135deg,#2E3628 0 12px,#39422F 12px 24px);border:1px solid rgba(247,244,234,.18);border-radius:16px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,234,.55);cursor:zoom-in">Slika — Ljubica Selaković Bandić</div>
+            <div>
+              <div style="font: 500 12px/1 Oswald,sans-serif; letter-spacing: .24em; text-transform: uppercase; color: #D8B34A">Predsednik &amp; vodič</div>
+              <h3 style="margin: 14px 0 20px; font: 600 clamp(28px,3vw,40px)/1.1 Oswald,sans-serif; text-transform: uppercase">Ljubica Selaković Bandić</h3>
+              <p style="margin:0;font:400 17px/1.75 'Source Sans 3',sans-serif;color:rgba(247,244,234,.82);text-wrap:pretty">Rođena 27. novembra 1978. u Novom Sadu, profesionalni sam baletski igrač i solista Srpskog narodnog pozorišta, ali i strastveni planinar i licencirani vodič (sportski penjač, napredni alpinista, vodič 2. kategorije UIAA i Via ferrata). Višestruko sam proglašavana za Najplaninarku Vojvodine i dobitnica nagrade „Podvig godine“. Godišnje vodim više od 50 akcija – od Fruške gore do visokogorskih uspona širom Srbije, regiona i Evrope, uključujući Camino de Santiago, proglašen najuspešnijom akcijom 2023. od strane PSS.</p>
+              <div style="margin-top:24px;font:500 15px/1.6 'IBM Plex Mono',monospace;color:#D8B34A">MB 792 · Tel. <a href="tel:+381631289477" style="color:#D8B34A;font-weight:600" style-hover="color:#F7F4EA">063/128-94-77</a></div>
+            </div>
+          </article>
+          <article style="flex:0 0 100%;scroll-snap-align:center;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px;align-items:center">
+            <div data-zoom="" onClick="{{ openZoom }}" style="order:{{ guideImgOrder }};min-height:440px;background:repeating-linear-gradient(135deg,#2E3628 0 12px,#39422F 12px 24px);border:1px solid rgba(247,244,234,.18);border-radius:16px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,234,.55);cursor:zoom-in">Slika — Žarko Atanasovski</div>
+            <div>
+              <div style="font: 500 12px/1 Oswald,sans-serif; letter-spacing: .24em; text-transform: uppercase; color: #D8B34A">Osnivač &amp; vodič</div>
+              <h3 style="margin: 14px 0 20px; font: 600 clamp(28px,3vw,40px)/1.1 Oswald,sans-serif; text-transform: uppercase">Žarko Atanasovski</h3>
+              <p style="margin:0;font:400 17px/1.75 'Source Sans 3',sans-serif;color:rgba(247,244,234,.82);text-wrap:pretty">Rođen 11. februara 1989. u Požarevcu, živi i radi u Novom Sadu. Trener je gimnastike i bivši član reprezentacije Srbije u sportskoj gimnastici sa više od 10 godina iskustva. Završio je napredni alpinistički tečaj u letnjim i zimskim uslovima, školovanje za vodiča 2. kategorije UIAA i vodiča Via ferrata. Jedan je od najaktivnijih vodiča u Srbiji i Vojvodini, sa preko 50 akcija godišnje na vrhovima širom Srbije, regiona, Evrope i Severne Afrike.</p>
+              <div style="margin-top:24px;font:500 15px/1.6 'IBM Plex Mono',monospace;color:#D8B34A">MB 793 · Tel. <a href="tel:+381644222237" style="color:#D8B34A;font-weight:600" style-hover="color:#F7F4EA">064/422-22-37</a></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="akcije-prepoznatljivost" style="padding:110px 32px 40px;scroll-margin-top:82px">
+    <div style="max-width:1240px;margin:0 auto;text-align:center">
+      <div style="font: 500 12px/1 Oswald,sans-serif; letter-spacing: .3em; text-transform: uppercase; color: #A57F13; margin-bottom: 18px">O nama</div>
+      <h2 style="margin: 0 auto; max-width: 900px; font: 700 clamp(32px,4vw,54px)/1.06 Oswald,sans-serif; letter-spacing: .01em; text-transform: uppercase; text-wrap: balance">Akcije po kojima smo prepoznatljivi</h2>
+      <div style="width:64px;height:3px;background:#C79A1F;margin:28px auto 0"></div>
+    </div>
+  </section>
+
+  <section style="padding:40px 32px 30px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid #E2DCCB;padding-bottom:18px;margin-bottom:26px">
+        <h3 style="margin: 0; font: 600 clamp(26px,3vw,38px)/1.1 Oswald,sans-serif; ">Camino de Santiago</h3>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button onClick="{{ scrollPrev }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">‹</button>
+          <button onClick="{{ scrollNext }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">›</button>
+          <a href="#/akcija/camino" style="margin-left:8px;background:#171A14;color:#F7F4EA;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:16px 22px;border-radius:7px" style-hover="background:#C79A1F;color:#171A14">Pročitaj više</a>
+        </div>
+      </div>
+      <div data-carousel="camino" style="position:relative">
+        <div data-track="" data-zoom-group="camino" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px">
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Camino — slika 01</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Camino — slika 02</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Camino — slika 03</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Camino — slika 04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:30px 32px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid #E2DCCB;padding-bottom:18px;margin-bottom:26px">
+        <h3 style="margin: 0; font: 600 clamp(26px,3vw,38px)/1.1 Oswald,sans-serif; ">Romantični Rtanj</h3>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button onClick="{{ scrollPrev }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">‹</button>
+          <button onClick="{{ scrollNext }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">›</button>
+          <a href="#/akcija/rtanj" style="margin-left:8px;background:#171A14;color:#F7F4EA;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:16px 22px;border-radius:7px" style-hover="background:#C79A1F;color:#171A14">Pročitaj više</a>
+        </div>
+      </div>
+      <div data-carousel="rtanj" style="position:relative">
+        <div data-track="" data-zoom-group="rtanj" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px">
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Rtanj — slika 01</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Rtanj — slika 02</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Rtanj — slika 03</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Rtanj — slika 04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:30px 32px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid #E2DCCB;padding-bottom:18px;margin-bottom:26px">
+        <h3 style="margin: 0; font: 600 clamp(26px,3vw,38px)/1.1 Oswald,sans-serif; ">Madeira</h3>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button onClick="{{ scrollPrev }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">‹</button>
+          <button onClick="{{ scrollNext }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">›</button>
+          <a href="#/akcija/madeira" style="margin-left:8px;background:#171A14;color:#F7F4EA;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:16px 22px;border-radius:7px" style-hover="background:#C79A1F;color:#171A14">Pročitaj više</a>
+        </div>
+      </div>
+      <div data-carousel="madeira" style="position:relative">
+        <div data-track="" data-zoom-group="madeira" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px">
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Madeira — slika 01</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Madeira — slika 02</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Madeira — slika 03</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Madeira — slika 04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:30px 32px 90px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid #E2DCCB;padding-bottom:18px;margin-bottom:26px">
+        <h3 style="margin: 0; font: 600 clamp(26px,3vw,38px)/1.1 Oswald,sans-serif; ">Tenerife</h3>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button onClick="{{ scrollPrev }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">‹</button>
+          <button onClick="{{ scrollNext }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">›</button>
+          <a href="#/akcija/tenerife" style="margin-left:8px;background:#171A14;color:#F7F4EA;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:16px 22px;border-radius:7px" style-hover="background:#C79A1F;color:#171A14">Pročitaj više</a>
+        </div>
+      </div>
+      <div data-carousel="tenerife" style="position:relative">
+        <div data-track="" data-zoom-group="tenerife" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px">
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Tenerife — slika 01</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Tenerife — slika 02</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Tenerife — slika 03</div>
+          <div data-zoom="" onClick="{{ openZoom }}" style="flex:0 0 min(420px,78%);height:290px;scroll-snap-align:start;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Tenerife — slika 04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mi-u-medijima" style="padding:100px 32px;background:#F1EEE4;scroll-margin-top:82px">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:60px;align-items:center">
+      <div>
+        <div style="font: 500 12px/1 Oswald,sans-serif; letter-spacing: .3em; text-transform: uppercase; color: #A57F13; margin-bottom: 18px">O nama</div>
+        <h2 style="margin: 0 0 26px; font: 700 clamp(32px,4vw,50px)/1.06 Oswald,sans-serif; text-transform: uppercase">Mi u medijima</h2>
+        <div style="width:64px;height:3px;background:#C79A1F;margin-bottom:28px"></div>
+        <p style="margin:0 0 18px;font:400 18px/1.7 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">O MontaNIKI se govori i van staza. Naši vodiči i članovi bili su gosti televizijskih i radijskih emisija, a o našim akcijama pisali su lokalni i nacionalni mediji.</p>
+        <p style="margin:0;font:400 18px/1.7 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Pogledajte emisiju u kojoj smo govorili o planinarenju, bezbednosti na stazi i zajednici koju gradimo.</p>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px">
+          <div style="font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8B8571">Skroluj strelicama kroz medijske objave</div>
+          <div style="display:flex;gap:10px">
+            <button onClick="{{ scrollPrev }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">‹</button>
+            <button onClick="{{ scrollNext }}" style="width:46px;height:46px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:18px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">›</button>
+          </div>
+        </div>
+        <div data-carousel="mediji" style="position:relative">
+          <div data-track="" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px">
+            <div style="flex:0 0 100%;scroll-snap-align:start;display:grid;gap:12px">
+              <div style="position:relative;aspect-ratio:16/9;background:#171A14;border-radius:14px;overflow:hidden">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Emisija o MontaNIKI" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+              </div>
+              <div style="font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv emisije i medij (upiši)</div>
+            </div>
+            <div style="flex:0 0 100%;scroll-snap-align:start;display:grid;gap:12px">
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener" style="position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;text-align:center;padding:16px" style-hover="border-color:#C79A1F;color:#171A14">Slika iz emisije — klik vodi na link</a>
+              <div style="font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv emisije i medij (upiši)</div>
+            </div>
+            <div style="flex:0 0 100%;scroll-snap-align:start;display:grid;gap:12px">
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener" style="position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;text-align:center;padding:16px" style-hover="border-color:#C79A1F;color:#171A14">Mesto za sliku ili link ka članku</a>
+              <div style="font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv članka i medij (upiši)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aktuelne-akcije" style="padding:100px 32px;scroll-margin-top:82px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:38px">
+        <div>
+          <div style="font:500 12px/1 Oswald,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#A57F13;margin-bottom:16px">Naše akcije</div>
+          <h2 style="margin:0;font:700 clamp(32px,4vw,50px)/1.06 Oswald,sans-serif;text-transform:uppercase">Aktuelne ponude akcija</h2>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button onClick="{{ scrollPrev }}" style="width:52px;height:52px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:20px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">‹</button>
+          <button onClick="{{ scrollNext }}" style="width:52px;height:52px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:20px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">›</button>
+        </div>
+      </div>
+      <div data-carousel="aktuelne" style="position:relative">
+        <div data-track="" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px">
+          <div style="flex:0 0 min(400px,84%);scroll-snap-align:start;background:#171A14;color:#F7F4EA;padding:34px 30px">
+            <div style="font:600 13px/1 Oswald,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:#D8B34A">Tekući mesec</div>
+            <h3 style="margin:12px 0 24px;font:600 34px/1.1 Oswald,sans-serif;text-transform:uppercase">Avgust 2026</h3>
+            <ul style="margin:0;padding:0;list-style:none;display:grid;gap:14px">
+              <li style="border-top:1px solid rgba(247,244,234,.18);padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif">08.08. — Fruška gora, jutarnja tura (upiši detalje)</li>
+              <li style="border-top:1px solid rgba(247,244,234,.18);padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif">16.08. — Naziv akcije (upiši detalje)</li>
+              <li style="border-top:1px solid rgba(247,244,234,.18);padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif">23.08. — Naziv akcije (upiši detalje)</li>
+              <li style="border-top:1px solid rgba(247,244,234,.18);padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif">30.08. — Naziv akcije (upiši detalje)</li>
+            </ul>
+          </div>
+          <div style="flex:0 0 min(400px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:34px 30px">
+            <div style="font:600 13px/1 Oswald,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:#A57F13">Sledeći mesec</div>
+            <h3 style="margin:12px 0 24px;font:600 34px/1.1 Oswald,sans-serif;text-transform:uppercase">Septembar 2026</h3>
+            <ul style="margin:0;padding:0;list-style:none;display:grid;gap:14px">
+              <li style="border-top:1px solid #E2DCCB;padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#3C4237">06.09. — Naziv akcije (upiši detalje)</li>
+              <li style="border-top:1px solid #E2DCCB;padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#3C4237">13.09. — Naziv akcije (upiši detalje)</li>
+              <li style="border-top:1px solid #E2DCCB;padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#3C4237">20.09. — Naziv akcije (upiši detalje)</li>
+            </ul>
+          </div>
+          <div style="flex:0 0 min(400px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:34px 30px">
+            <div style="font:600 13px/1 Oswald,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:#A57F13">U pripremi</div>
+            <h3 style="margin:12px 0 24px;font:600 34px/1.1 Oswald,sans-serif;text-transform:uppercase">Oktobar 2026</h3>
+            <ul style="margin:0;padding:0;list-style:none;display:grid;gap:14px">
+              <li style="border-top:1px solid #E2DCCB;padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#3C4237">04.10. — Naziv akcije (upiši detalje)</li>
+              <li style="border-top:1px solid #E2DCCB;padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#3C4237">11.10. — Naziv akcije (upiši detalje)</li>
+              <li style="border-top:1px solid #E2DCCB;padding-top:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#3C4237">25.10. — Naziv akcije (upiši detalje)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:34px;border:1px solid #E2DCCB;background:#FFF;border-radius:14px;padding:28px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center">
+        <div style="font:600 13px/1.4 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#A57F13">Kontakt vodiča</div>
+        <div style="font:400 17px/1.6 'Source Sans 3',sans-serif"><strong>Ljubica Selaković – Bandić</strong><br><span style="color:#5A5F52">MB 792</span><br>Tel. <a href="tel:+381631289477" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">063/128-94-77</a></div>
+        <div style="font:400 17px/1.6 'Source Sans 3',sans-serif"><strong>Žarko Atanasovski</strong><br><span style="color:#5A5F52">MB 793</span><br>Tel. <a href="tel:+381644222237" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">064/422-22-37</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:90px 32px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:900px;margin:0 auto;text-align:center">
+      <h2 style="margin: 0 0 22px; font: 700 clamp(30px,3.6vw,46px)/1.1 Oswald,sans-serif; text-transform: uppercase; text-wrap: balance">Planina je pravac. MontaNIKA je smer.</h2>
+      <p style="margin:0 auto 36px;max-width:620px;font:400 18px/1.7 'Source Sans 3',sans-serif;color:rgba(247,244,234,.8)">Pridruži se društvu, upiši se na akciju ili nam se javi — vidimo se na stazi.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="#/postani-clan" style="background:#C79A1F;color:#171A14;font:600 14px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:19px 32px;border-radius:8px" style-hover="background:#F7F4EA">Postani član</a>
+        <a href="https://invite.viber.com/?g2=AQBr9qAj1MiHKFJ9b7H2fnfUiMkQcGag6ifg1bBSuuPWAhX0Xf%2FpuRqcljYsVesU" target="_blank" rel="noopener" style="border:1px solid rgba(247,244,234,.5);color:#F7F4EA;font:500 14px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:19px 32px;border-radius:8px" style-hover="background:rgba(247,244,234,.12)">Pridruži se Viber zajednici</a>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAction }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="position:relative;min-height:56vh;display:flex;align-items:flex-end;overflow:hidden">
+    <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,#2A3325 0 14px,#333D2C 14px 28px)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,15,10,.6),rgba(12,15,10,.8))"></div>
+    <div style="position:absolute;right:24px;top:110px;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,234,.55)">Mesto za naslovnu sliku akcije</div>
+    <div style="position:relative;max-width:1240px;margin:0 auto;padding:150px 32px 60px;width:100%">
+      <a href="#/?a=akcije-prepoznatljivost" style="color:#D8B34A;font:500 12px/1 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase">← Sve akcije</a>
+      <h1 style="margin:20px 0 0;font:700 clamp(38px,5.4vw,74px)/1.03 Oswald,sans-serif;text-transform:uppercase;color:#FFF">{{ actionTitle }}</h1>
+      <p style="margin:16px 0 0;font:400 19px/1.6 'Source Sans 3',sans-serif;color:rgba(255,255,255,.82)">{{ actionSubtitle }}</p>
+    </div>
+  </section>
+  <section style="padding:80px 32px">
+    <div style="max-width:900px;margin:0 auto">
+      <p style="margin:0 0 20px;font:400 19px/1.75 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Ovde ide tekst o akciji — kada je organizovana, kojom rutom se ide, koliko traje, kakva je težina i šta učesnike očekuje. (Zameni ovaj tekst svojim opisom.)</p>
+      <p style="margin:0 0 20px;font:400 19px/1.75 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Dodaj i praktične informacije: oprema, prevoz, smeštaj, cena, prijave i kontakt vodiča.</p>
+      <div style="border-left:3px solid #C79A1F;padding:8px 0 8px 22px;font:italic 400 20px/1.6 'Source Sans 3',sans-serif;color:#171A14">Citat člana ili vodiča o ovoj akciji.</div>
+    </div>
+  </section>
+  <section style="padding:0 32px 100px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:24px">
+        <h2 style="margin:0;font:600 clamp(24px,3vw,36px)/1.1 Oswald,sans-serif;text-transform:uppercase">Galerija akcije</h2>
+        <div style="font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8B8571">Klik na sliku = zumiranje · strelice za listanje</div>
+      </div>
+      <div data-zoom-group="akcija" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px">
+        <div data-zoom="" onClick="{{ openZoom }}" style="height:260px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Slika 01</div>
+        <div data-zoom="" onClick="{{ openZoom }}" style="height:260px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Slika 02</div>
+        <div data-zoom="" onClick="{{ openZoom }}" style="height:260px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Slika 03</div>
+        <div data-zoom="" onClick="{{ openZoom }}" style="height:260px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Slika 04</div>
+        <div data-zoom="" onClick="{{ openZoom }}" style="height:260px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Slika 05</div>
+        <div data-zoom="" onClick="{{ openZoom }}" style="height:260px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Slika 06</div>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isPlan }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="padding:150px 32px 50px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="font:500 12px/1 Oswald,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#D8B34A;margin-bottom:16px">Naše akcije</div>
+      <h1 style="margin:0;font:700 clamp(36px,5vw,68px)/1.04 Oswald,sans-serif;text-transform:uppercase">Godišnji plan akcija 2026</h1>
+    </div>
+  </section>
+  <section style="padding:50px 32px 40px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px">
+        <div style="font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8B8571">Skroluj strelicama kroz mesece</div>
+        <div style="display:flex;gap:10px">
+          <button onClick="{{ scrollPrev }}" style="width:52px;height:52px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:20px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">‹</button>
+          <button onClick="{{ scrollNext }}" style="width:52px;height:52px;border-radius:50%;border:1px solid #DAD3C2;background:#FFF;font-size:20px;cursor:pointer" style-hover="background:#C79A1F;border-color:#C79A1F">›</button>
+        </div>
+      </div>
+      <div data-carousel="plan" style="position:relative">
+        <div data-track="" style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px">
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Januar</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Februar</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Mart</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Terenska obuka 28.03.2026.</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">April</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">OPO 04. i 05.04.2026.</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Maj</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Jun</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Jul</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#171A14;color:#F7F4EA;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Avgust</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid rgba(247,244,234,.2);padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif">Fruška gora, jutarnja tura 08.08.</li><li style="border-top:1px solid rgba(247,244,234,.2);padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Septembar</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Oktobar</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Novembar</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+          <div style="flex:0 0 min(340px,84%);scroll-snap-align:start;background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:28px 26px"><h3 style="margin:0 0 18px;font:600 28px/1.1 Oswald,sans-serif;text-transform:uppercase">Decembar</h3><ul style="margin:0;padding:0;list-style:none;display:grid;gap:12px"><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li><li style="border-top:1px solid #E2DCCB;padding-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237">Akcija (upiši naziv i datum)</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="padding:0 32px 100px">
+    <div style="max-width:1240px;margin:0 auto;position:sticky;bottom:24px;background:#171A14;color:#F7F4EA;padding:28px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:center;box-shadow:0 18px 40px rgba(23,26,20,.18)">
+      <div style="font:600 13px/1.4 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D8B34A">Kontakt vodiča</div>
+      <div style="font:400 17px/1.6 'Source Sans 3',sans-serif"><strong>Ljubica Selaković – Bandić</strong><br><span style="color:#5A5F52">MB 792</span><br>Tel. <a href="tel:+381631289477" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">063/128-94-77</a></div>
+      <div style="font:400 17px/1.6 'Source Sans 3',sans-serif"><strong>Žarko Atanasovski</strong><br><span style="color:#5A5F52">MB 793</span><br>Tel. <a href="tel:+381644222237" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">064/422-22-37</a></div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isNotices }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="padding:150px 32px 60px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:1240px;margin:0 auto">
+      <h1 style="margin:0;font:700 clamp(36px,5vw,68px)/1.04 Oswald,sans-serif;text-transform:uppercase">Obaveštenja</h1>
+      <p style="margin:16px 0 0;font:400 18px/1.6 'Source Sans 3',sans-serif;color:rgba(247,244,234,.78)">Važne informacije za članove i učesnike naših akcija.</p>
+    </div>
+  </section>
+  <section style="padding:70px 32px 110px">
+    <div style="max-width:900px;margin:0 auto;display:grid;gap:20px">
+      <article style="border:1px solid #E2DCCB;background:#FFF;border-radius:14px;padding:32px 30px">
+        <div style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#A57F13">Datum obaveštenja</div>
+        <h2 style="margin:14px 0 12px;font:600 26px/1.2 Oswald,sans-serif;text-transform:uppercase">Naslov obaveštenja</h2>
+        <p style="margin:0;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Tekst obaveštenja (naknadno uređuješ). Ovde možeš dodati i link ili dokument za preuzimanje.</p>
+      </article>
+      <article style="border:1px solid #E2DCCB;background:#FFF;border-radius:14px;padding:32px 30px">
+        <div style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#A57F13">Datum obaveštenja</div>
+        <h2 style="margin:14px 0 12px;font:600 26px/1.2 Oswald,sans-serif;text-transform:uppercase">Naslov obaveštenja</h2>
+        <p style="margin:0;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Tekst obaveštenja (naknadno uređuješ).</p>
+      </article>
+      <article style="border:1px dashed #DAD3C2;border-radius:14px;padding:32px 30px;text-align:center;font:11px/1.6 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571">Mesto za novo obaveštenje</article>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMember }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden">
+    <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,#2A3325 0 14px,#333D2C 14px 28px)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,15,10,.55),rgba(12,15,10,.8))"></div>
+    <div style="position:absolute;right:24px;top:110px;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,234,.55)">Mesto za tvoju sliku (gore)</div>
+    <div style="position:relative;max-width:1240px;margin:0 auto;padding:150px 32px 56px;width:100%">
+      <h1 style="margin:0;font:700 clamp(38px,5.4vw,72px)/1.03 Oswald,sans-serif;text-transform:uppercase;color:#FFF">Postani član</h1>
+    </div>
+  </section>
+
+  <section style="padding:90px 32px">
+    <div style="max-width:900px;margin:0 auto">
+      <h2 style="margin:0 0 26px;font:700 clamp(28px,3.4vw,44px)/1.1 Oswald,sans-serif;text-transform:uppercase">Zašto postati član MontaNIKE?</h2>
+      <p style="margin:0 0 18px;font:400 18px/1.75 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Monta<span style="color:#A57F13;font-weight:600">NIKA</span> nije slučajno ime. Nastala je iz potrebe za drugačijim pristupom planinarenju – slobodnijim, iskrenijim, gde svaki član može da raste i doprinese zajednici na svoj način. Iz želje da planina bude pravac slobode, a naše zajedništvo smer ka pobedi – <span style="color:#A57F13;font-weight:600">NIKA</span>.</p>
+      <p style="margin:0;font:400 18px/1.75 'Source Sans 3',sans-serif;color:#3C4237;text-wrap:pretty">Kod nas nema mesta za takmičenje, nadmetanje, sujetu, prepričavanja drugih… Ima mesta za toleranciju, podršku i razumevanje. Za osmeh kad je teško i za ruku kad treba snage više. MontaNIKA je prostor gde različitost postaje naša snaga, a sloboda izbora i duha naš najveći poklon prirodi i sebi.</p>
+    </div>
+  </section>
+
+  <section style="padding:0 32px 90px">
+    <div style="max-width:1100px;margin:0 auto;background:#F1EEE4;padding:48px 40px">
+      <h2 style="margin:0 0 30px;font:600 clamp(24px,3vw,34px)/1.15 Oswald,sans-serif;text-transform:uppercase">Šta članovi dobijaju u okviru članarine?</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+        <div style="display:flex;gap:12px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237"><span style="color:#A57F13;font-weight:700">✓</span> Besplatnu Osnovnu planinarsku obuku (OPO)</div>
+        <div style="display:flex;gap:12px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237"><span style="color:#A57F13;font-weight:700">✓</span> Planinarske akcije na Fruškoj gori tokom cele godine</div>
+        <div style="display:flex;gap:12px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237"><span style="color:#A57F13;font-weight:700">✓</span> Vođene ture sa iskusnim i licenciranim vodičima</div>
+        <div style="display:flex;gap:12px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237"><span style="color:#A57F13;font-weight:700">✓</span> Sistematičan rad sa članovima – prikazne vežbe na terenu</div>
+        <div style="display:flex;gap:12px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237"><span style="color:#A57F13;font-weight:700">✓</span> Raznovrsne akcije u Srbiji i inostranstvu – za sve nivoe</div>
+        <div style="display:flex;gap:12px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237"><span style="color:#A57F13;font-weight:700">✓</span> Uređenu organizaciju, sigurnost i pripadnost zajednici</div>
+        <div style="display:flex;gap:12px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237"><span style="color:#A57F13;font-weight:700">✓</span> Saradnju sa drugim društvima i vodičima u regionu</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 32px 90px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:46px">
+        <div style="font:500 12px/1 Oswald,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#A57F13;margin-bottom:16px">Cenovnik 2026</div>
+        <h2 style="margin:0 0 14px;font:700 clamp(28px,3.4vw,44px)/1.1 Oswald,sans-serif;text-transform:uppercase">Članarine</h2>
+        <p style="margin:0 auto;max-width:560px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#5A5F52">Sve članarine se plaćaju jednom godišnje, u okviru Planinarskog saveza Srbije.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;align-items:stretch">
+        <div style="position:relative;display:flex;flex-direction:column;gap:0;background:#FFF;color:#171A14;border:1px solid #E2DCCB;border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(23,26,20,.05)">
+          
+          <div style="padding:34px 30px 26px;border-bottom:1px solid #EFEBE0">
+            <div style="font:600 12px/1.4 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#A57F13;min-height:34px;max-width:76%">Studenti i deca</div>
+            <div style="margin-top:18px;display:flex;align-items:baseline;gap:8px">
+              <span style="font:700 52px/1 Oswald,sans-serif">1800</span>
+              <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:#8B8571">rsd / godišnje</span>
+            </div>
+            <p style="margin:16px 0 0;font:400 16px/1.6 'Source Sans 3',sans-serif;color:#5A5F52;min-height:78px">Za učenike i studente. Pokriva osiguranje prvog stepena u okviru Planinarskog saveza Srbije.</p>
+          </div>
+          <div style="padding:26px 30px 30px;display:flex;flex-direction:column;gap:14px;flex:1">
+            <div style="display:grid;gap:12px;flex:1"><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#F0E4C4;color:#A57F13;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Osnovno planinarsko osiguranje</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#F0E4C4;color:#A57F13;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Besplatne akcije na Fruškoj gori</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#F0E4C4;color:#A57F13;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Osnovna planinarska obuka (OPO)</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#A9A491"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#EDEAE0;color:#A9A491;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">–</span><span>Pokriće za akcije van Srbije</span></div></div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScO43rEtSI9UO-opovrFHafdoedJW5Cp3XlRabayEwQeMAPFg/viewform?usp=header" target="_blank" rel="noopener" style="margin-top:8px;text-align:center;background:transparent;border:1px solid #171A14;color:#171A14;font:600 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:18px 20px;border-radius:8px" style-hover="background:#171A14;color:#F7F4EA">Učlani se</a>
+          </div>
+        </div>
+        <div style="position:relative;display:flex;flex-direction:column;gap:0;background:#171A14;color:#F7F4EA;border:1px solid #171A14;border-radius:18px;overflow:hidden;box-shadow:0 24px 50px rgba(23,26,20,.22)">
+          <div style="position:absolute;top:20px;right:20px;background:#C79A1F;color:#171A14;font:600 10px/1 Oswald,sans-serif;letter-spacing:.18em;text-transform:uppercase;padding:8px 12px;border-radius:20px">Najčešći izbor</div>
+          <div style="padding:34px 30px 26px;border-bottom:1px solid rgba(247,244,234,.14)">
+            <div style="font:600 12px/1.4 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D8B34A;min-height:34px;max-width:calc(100% - 140px)">Osnovno planinarsko osiguranje</div>
+            <div style="margin-top:18px;display:flex;align-items:baseline;gap:8px">
+              <span style="font:700 52px/1 Oswald,sans-serif">3000</span>
+              <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:rgba(247,244,234,.6)">rsd / godišnje</span>
+            </div>
+            <p style="margin:16px 0 0;font:400 16px/1.6 'Source Sans 3',sans-serif;color:rgba(247,244,234,.72);min-height:78px">Za rekreativce koji planinare pretežno po Fruškoj gori i Srbiji. Osiguranje prvog stepena.</p>
+          </div>
+          <div style="padding:26px 30px 30px;display:flex;flex-direction:column;gap:14px;flex:1">
+            <div style="display:grid;gap:12px;flex:1"><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:rgba(247,244,234,.88)"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#C79A1F;color:#171A14;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Osnovno planinarsko osiguranje</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:rgba(247,244,234,.88)"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#C79A1F;color:#171A14;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Besplatne akcije na Fruškoj gori</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:rgba(247,244,234,.88)"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#C79A1F;color:#171A14;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Osnovna planinarska obuka (OPO)</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:rgba(247,244,234,.45)"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:rgba(247,244,234,.12);color:rgba(247,244,234,.5);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">–</span><span>Pokriće za akcije van Srbije</span></div></div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScO43rEtSI9UO-opovrFHafdoedJW5Cp3XlRabayEwQeMAPFg/viewform?usp=header" target="_blank" rel="noopener" style="margin-top:8px;text-align:center;background:#C79A1F;border:1px solid #C79A1F;color:#171A14;font:600 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:18px 20px;border-radius:8px" style-hover="background:#F7F4EA;border-color:#F7F4EA">Učlani se</a>
+          </div>
+        </div>
+        <div style="position:relative;display:flex;flex-direction:column;gap:0;background:#FFF;color:#171A14;border:1px solid #E2DCCB;border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(23,26,20,.05)">
+          
+          <div style="padding:34px 30px 26px;border-bottom:1px solid #EFEBE0">
+            <div style="font:600 12px/1.4 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#A57F13;min-height:34px;max-width:76%">Drugi stepen osiguranja</div>
+            <div style="margin-top:18px;display:flex;align-items:baseline;gap:8px">
+              <span style="font:700 52px/1 Oswald,sans-serif">5000</span>
+              <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:#8B8571">rsd / godišnje</span>
+            </div>
+            <p style="margin:16px 0 0;font:400 16px/1.6 'Source Sans 3',sans-serif;color:#5A5F52;min-height:78px">Za akcije van Srbije i sve planinarske discipline, uz pokriće skupih spasilačkih intervencija.</p>
+          </div>
+          <div style="padding:26px 30px 30px;display:flex;flex-direction:column;gap:14px;flex:1">
+            <div style="display:grid;gap:12px;flex:1"><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#F0E4C4;color:#A57F13;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Prošireno planinarsko osiguranje</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#F0E4C4;color:#A57F13;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Besplatne akcije na Fruškoj gori</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#F0E4C4;color:#A57F13;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Osnovna planinarska obuka (OPO)</span></div><div style="display:flex;gap:11px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#F0E4C4;color:#A57F13;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px">✓</span><span>Sve discipline i inostranstvo</span></div></div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScO43rEtSI9UO-opovrFHafdoedJW5Cp3XlRabayEwQeMAPFg/viewform?usp=header" target="_blank" rel="noopener" style="margin-top:8px;text-align:center;background:transparent;border:1px solid #171A14;color:#171A14;font:600 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:18px 20px;border-radius:8px" style-hover="background:#171A14;color:#F7F4EA">Učlani se</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px">
+        <div style="background:#F1EEE4;border-radius:16px;padding:32px 30px">
+          <h3 style="margin:0 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#171A14">Osnovno osiguranje · studenti i deca</h3>
+          <p style="margin:0;font:400 16px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Preporučuje se rekreativcima i onima koji planinare pretežno po Fruškoj gori i Srbiji. Niža premija jer pokriva osnovne i manje rizične aktivnosti.</p>
+        </div>
+        <div style="background:#F1EEE4;border-radius:16px;padding:32px 30px">
+          <h3 style="margin:0 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#171A14">Drugi stepen osiguranja</h3>
+          <p style="margin:0;font:400 16px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Za sve koji planiraju akcije van Srbije. Viša premija jer pokriva inostranstvo, sve discipline i potencijalno visoke troškove spasilačkih intervencija, uključujući helikopter.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border:1px solid #E2DCCB;border-radius:16px;padding:24px 28px;background:#FFF">
+        <div style="font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237">Nisi siguran koji paket ti odgovara? Pogledaj detalje osiguranja Planinarskog saveza Srbije.</div>
+        <a href="https://pss.rs/osiguranje-clanova-pss-2023/bezbednost-i-preventiva/2022/" target="_blank" rel="noopener" style="flex:0 0 auto;border:1px solid #171A14;color:#171A14;font:500 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:17px 24px;border-radius:7px" style-hover="background:#171A14;color:#F7F4EA">Informacije o osiguranju</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 32px 90px">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:start">
+      <div>
+        <h2 style="margin:0 0 24px;font:700 clamp(26px,3.2vw,40px)/1.1 Oswald,sans-serif;text-transform:uppercase">Kako se učlaniti?</h2>
+        <ol style="margin:0;padding-left:22px;display:grid;gap:14px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237">
+          <li>Popuni <strong>prijavni formular</strong> (dugme „Učlani se”)</li>
+          <li>Uplati <strong>iznos članarine</strong> na račun društva</li>
+          <li>Svrha uplate: <strong>ČLANARINA 2026.</strong></li>
+          <li>Na e-mail ti stiže <strong>članska karta</strong></li>
+        </ol>
+      </div>
+      <div>
+        <div style="font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;margin-bottom:12px">Primer uplatnice</div>
+        <div data-zoom onClick="{{ openZoom }}" style="background:#FFF;border:1px solid #DAD3C2;border-radius:14px;padding:14px;cursor:zoom-in"><img src="images/uplatnica.png" alt="Primer uplatnice — nalog za uplatu članarine" style="width:100%;height:auto;display:block;border-radius:6px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:80px 32px;background:#F1EEE4">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:44px">
+      <div>
+        <h2 style="margin:0 0 20px;font:600 clamp(22px,2.6vw,32px)/1.2 Oswald,sans-serif;text-transform:uppercase">Prijavi se za Osnovnu planinarsku obuku</h2>
+        <p style="margin:0 0 16px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">OPO 04. i 05.04.2026. i Terenska obuka 28.03.2026. Obuka je besplatna za članove našeg društva, a članovi ostalih društava plaćaju 2000 rsd uz svrhu uplate „OPO APRIL”. Račun: 265-7570310000737-20.</p>
+        <p style="margin:0 0 24px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Prijava se vrši preuzimanjem dokumenta, elektronskim popunjavanjem i slanjem na <a href="mailto:info@montanika.rs">info@montanika.rs</a>. Formular možeš i odštampati, popuniti i poslati sliku na mail.</p>
+        <a href="https://montanika.rs/wp-content/uploads/2025/12/Obrazac-za-prijavu-za-OPO.docx" style="display:inline-block;background:#171A14;color:#F7F4EA;font:500 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:17px 24px;border-radius:7px" style-hover="background:#C79A1F;color:#171A14">Prijavi se za OPO</a>
+      </div>
+      <div>
+        <h2 style="margin:0 0 20px;font:600 clamp(22px,2.6vw,32px)/1.2 Oswald,sans-serif;text-transform:uppercase">Organizovan grupni pregled kod sportskog lekara</h2>
+        <p style="margin:0 0 24px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">U saradnji sa NS LAB – Novi Sad dogovorili smo organizovan grupni pregled kod sportskog lekara, kao deo ozbiljnog i odgovornog pristupa bezbednosti u planini.</p>
+        <a href="#/pregled" style="display:inline-block;border:1px solid #171A14;color:#171A14;font:500 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:17px 24px;border-radius:7px" style-hover="background:#171A14;color:#F7F4EA">Saznaj više o pregledu</a>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isExam }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="padding:150px 32px 56px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:900px;margin:0 auto">
+      <a href="#/postani-clan" style="color:#D8B34A;font:500 12px/1 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase">← Postani član</a>
+      <h1 style="margin:20px 0 14px;font:700 clamp(30px,4vw,54px)/1.06 Oswald,sans-serif;text-transform:uppercase;text-wrap:balance">Organizovan grupni pregled kod sportskog lekara</h1>
+      <p style="margin:0;font:400 18px/1.6 'Source Sans 3',sans-serif;color:rgba(247,244,234,.78)">Kao deo ozbiljnog i odgovornog pristupa bezbednosti u planini · 13.12.2025.</p>
+    </div>
+  </section>
+  <section style="padding:70px 32px 110px">
+    <div style="max-width:900px;margin:0 auto">
+      <p style="margin:0 0 18px;font:600 18px/1.7 'Source Sans 3',sans-serif;color:#171A14">VAŽNO OBAVEŠTENJE ZA ČLANOVE PD MontaNIKA I UČESNIKE NAŠIH AKCIJA</p>
+      <p style="margin:0 0 18px;font:400 18px/1.75 'Source Sans 3',sans-serif;color:#3C4237">Dragi MontaNIKA planinari, u saradnji sa NS LAB – Novi Sad, dogovorili smo organizovan grupni pregled kod sportskog lekara, kao deo ozbiljnog i odgovornog pristupa bezbednosti u planini.</p>
+      <h2 style="margin:40px 0 16px;font:600 26px/1.2 Oswald,sans-serif;text-transform:uppercase">Preporuka sportskog lekara</h2>
+      <ul style="margin:0;padding-left:20px;display:grid;gap:10px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237">
+        <li>Test opterećenja – jednom godišnje</li>
+        <li>Osnovni sportski lekarski pregled – na 6 meseci</li>
+        <li>Pregledi se mogu raditi naizmenično, radi kontinuirane kontrole zdravstvene spremnosti</li>
+      </ul>
+      <div style="margin:28px 0;border-left:3px solid #C79A1F;padding:14px 0 14px 22px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#171A14">Posebno važno: test opterećenja je naročito bitan za korisnike 2. stepena planinarskog osiguranja, jer pokazuje kako srce reaguje na fizički napor i kolika je sposobnost oporavka organizma tokom zahtevnih aktivnosti.</div>
+      <h2 style="margin:40px 0 20px;font:600 26px/1.2 Oswald,sans-serif;text-transform:uppercase">Opcije pregleda — grupne cene</h2>
+      <p style="margin:0 0 20px;font:400 16px/1.6 'Source Sans 3',sans-serif;color:#5A5F52">Cene važe za grupu članova PD MontaNIKA, kao i za planinare koji nisu članovi Društva, ali će učestvovati na našim akcijama tokom 2026. godine.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
+        <div style="border:1px solid #E2DCCB;background:#FFF;border-radius:14px;padding:28px 26px">
+          <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#A57F13">Opcija 1</div>
+          <h3 style="margin:12px 0 6px;font:600 24px/1.2 Oswald,sans-serif;text-transform:uppercase">Kompletan sportski pregled</h3>
+          <div style="font:700 32px/1 Oswald,sans-serif;margin-bottom:16px">2.700 din</div>
+          <div style="display:grid;gap:9px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span>Krvna slika</span><span>EKG u mirovanju</span><span>Test opterećenja</span><span>Praćenje pulsa i oporavka srca</span><span>Kontrolni EKG nakon opterećenja</span></div>
+        </div>
+        <div style="border:1px solid #E2DCCB;background:#FFF;border-radius:14px;padding:28px 26px">
+          <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#A57F13">Opcija 2</div>
+          <h3 style="margin:12px 0 6px;font:600 24px/1.2 Oswald,sans-serif;text-transform:uppercase">Osnovni lekarski pregled</h3>
+          <div style="font:700 32px/1 Oswald,sans-serif;margin-bottom:16px">1.800 din</div>
+          <div style="display:grid;gap:9px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#3C4237"><span>Krvna slika</span><span>EKG</span><span>Lekarski pregled</span></div>
+        </div>
+      </div>
+      <div style="margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;background:#F1EEE4;padding:30px 28px">
+        <div>
+          <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#A57F13;margin-bottom:10px">Mesto pregleda</div>
+          <div style="font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237">NS LAB – Novi Sad<br>Svetozara Miletića 24</div>
+        </div>
+        <div>
+          <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#A57F13;margin-bottom:10px">Organizacija</div>
+          <div style="font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237">Pregledi se obavljaju u organizovanim grupama. Nakon formiranja prve grupe prijavljenih bićete obavešteni o terminu.</div>
+        </div>
+        <div>
+          <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#A57F13;margin-bottom:10px">Prijava</div>
+          <div style="font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237">Lično kod vodiča: Ljubica <a href="tel:+381631289477" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">063/128-94-77</a>, Žarko <a href="tel:+381644222237" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">064/422-22-37</a> ili na <a href="mailto:info@montanika.rs">info@montanika.rs</a></div>
+        </div>
+      </div>
+      <h2 style="margin:44px 0 18px;font:600 26px/1.2 Oswald,sans-serif;text-transform:uppercase">Zašto je ovo važno?</h2>
+      <div style="display:grid;gap:10px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#3C4237">
+        <div>— Bezbednost svakog učesnika</div>
+        <div>— Kontrola reakcije srca na napor</div>
+        <div>— Odgovoran pristup planinarskim akcijama</div>
+        <div>— Preduslov za učešće u zahtevnijim turama</div>
+        <div>— Važan uslov za planinarsko osiguranje</div>
+      </div>
+      <p style="margin:30px 0 0;font:400 18px/1.75 'Source Sans 3',sans-serif;color:#3C4237">Mi smo vam olakšali dolazak do pregleda, a na vama je odluka gde želite da ga uradite i da li želite. PD MontaNIKA gradi ozbiljno, odgovorno i bezbedno planinarsko okruženje — ovo nije formalnost, već briga o zdravlju svakog pojedinca i cele grupe.</p>
+      <p style="margin:18px 0 0;font:600 18px/1.6 'Source Sans 3',sans-serif;color:#171A14">Hvala na razumevanju i poverenju. Vaša MontaNIKA</p>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isGallery }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="padding:150px 32px 50px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:1240px;margin:0 auto">
+      <h1 style="margin:0;font:700 clamp(36px,5vw,68px)/1.04 Oswald,sans-serif;text-transform:uppercase">Galerija</h1>
+      <p style="margin:16px 0 0;font:400 18px/1.6 'Source Sans 3',sans-serif;color:rgba(247,244,234,.78)">Slike sa naših akcija. Klik na sliku otvara zumirani prikaz, strelicama listaš dalje.</p>
+    </div>
+  </section>
+  <section style="padding:60px 32px 110px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div data-zoom-group="galerija" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px">
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+        <figure style="margin:0"><div data-zoom="" onClick="{{ openZoom }}" style="height:250px;background:repeating-linear-gradient(135deg,#E7E3D6 0 12px,#F0EDE3 12px 24px);border:1px solid #DAD3C2;border-radius:14px;display:flex;align-items:center;justify-content:center;font:11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8B8571;cursor:zoom-in">Mesto za sliku</div><figcaption style="margin-top:12px;font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv akcije i datum (upiši)</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="padding:150px 32px 50px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:1240px;margin:0 auto">
+      <h1 style="margin:0;font:700 clamp(36px,5vw,68px)/1.04 Oswald,sans-serif;text-transform:uppercase">Kontakt</h1>
+      <p style="margin:16px 0 0;font:400 18px/1.6 'Source Sans 3',sans-serif;color:rgba(247,244,234,.78)">Ukoliko imate pitanje, slobodno nas kontaktirajte!</p>
+    </div>
+  </section>
+  <section style="padding:80px 32px 110px">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:60px;align-items:start">
+      <div>
+        <h2 style="margin:0 0 22px;font:600 clamp(24px,3vw,34px)/1.2 Oswald,sans-serif;text-transform:uppercase">Pošaljite nam poruku ili mejl!</h2>
+        <p style="margin:0 0 18px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Niste sigurni koji je paket članarine za Vas, koja staza odgovara Vašim mogućnostima ili imate drugo pitanje — budite slobodni da nas kontaktirate.</p>
+        <p style="margin:0 0 30px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Kontaktirajte nas putem forme ili zvanične e-mail adrese: <a href="mailto:info@montanika.rs">info@montanika.rs</a></p>
+        <div style="border-top:1px solid #E2DCCB;padding-top:26px">
+          <h3 style="margin:0 0 12px;font:600 18px/1.2 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase">Zapratite nas na mrežama</h3>
+          <p style="margin:0 0 18px;font:400 15px/1.6 'Source Sans 3',sans-serif;color:#5A5F52">Navedene mreže su jedini zvanični nalozi PD „MontaNIKA” Novi Sad.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="https://www.facebook.com/share/g/1AJ759TPcL/" target="_blank" rel="noopener" style="border:1px solid #DAD3C2;color:#171A14;font:500 12px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:14px 18px;border-radius:6px" style-hover="background:#171A14;color:#F7F4EA">Facebook</a>
+            <a href="https://www.instagram.com/pdmontanika/" target="_blank" rel="noopener" style="border:1px solid #DAD3C2;color:#171A14;font:500 12px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:14px 18px;border-radius:6px" style-hover="background:#171A14;color:#F7F4EA">Instagram</a>
+            <a href="https://invite.viber.com/?g2=AQBr9qAj1MiHKFJ9b7H2fnfUiMkQcGag6ifg1bBSuuPWAhX0Xf%2FpuRqcljYsVesU" target="_blank" rel="noopener" style="border:1px solid #DAD3C2;color:#171A14;font:500 12px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:14px 18px;border-radius:6px" style-hover="background:#171A14;color:#F7F4EA">Viber zajednica</a>
+          </div>
+          <div style="margin-top:26px;font:400 17px/1.8 'Source Sans 3',sans-serif;color:#3C4237">Tel. <a href="tel:+381631289477" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">063/128-94-77</a><br>Tel. <a href="tel:+381644222237" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">064/422-22-37</a></div>
+        </div>
+      </div>
+      <form onSubmit="{{ onSubmit }}" style="background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:36px 32px;display:grid;gap:20px">
+        <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Ime i prezime*
+          <input type="text" required="" style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.4 'Source Sans 3',sans-serif;color:#171A14">
+        </label>
+        <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Email*
+          <input type="email" required="" style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.4 'Source Sans 3',sans-serif;color:#171A14">
+        </label>
+        <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Poruka
+          <textarea rows="6" style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#171A14;resize:vertical"></textarea>
+        </label>
+        <button type="submit" style="background:#C79A1F;border:0;color:#171A14;font:600 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:18px;cursor:pointer;border-radius:8px" style-hover="background:#171A14;color:#F7F4EA">Pošalji!</button>
+      </form>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isReviews }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="padding:150px 32px 50px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:1240px;margin:0 auto">
+      <h1 style="margin:0;font:700 clamp(36px,5vw,68px)/1.04 Oswald,sans-serif;text-transform:uppercase">Napiši utiske</h1>
+      <p style="margin:16px 0 0;font:400 18px/1.6 'Source Sans 3',sans-serif;color:rgba(247,244,234,.78)">Podeli iskustvo sa staze — tvoj utisak pomaže drugima da nam se pridruže.</p>
+    </div>
+  </section>
+  <section style="padding:80px 32px 110px">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:56px;align-items:start">
+      <form onSubmit="{{ onSubmit }}" style="background:#FFF;border:1px solid #E2DCCB;border-radius:14px;padding:36px 32px;display:grid;gap:20px">
+        <h2 style="margin:0;font:600 24px/1.2 Oswald,sans-serif;text-transform:uppercase">Tvoja recenzija</h2>
+        <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Ocena
+          <select style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.4 'Source Sans 3',sans-serif;color:#171A14">
+            <option>5 zvezdica</option>
+            <option>4 zvezdice</option>
+            <option>3 zvezdice</option>
+            <option>2 zvezdice</option>
+            <option>1 zvezdica</option>
+          </select>
+        </label>
+        <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Naslov
+          <input type="text" style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.4 'Source Sans 3',sans-serif;color:#171A14">
+        </label>
+        <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Utisak
+          <textarea rows="6" style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.5 'Source Sans 3',sans-serif;color:#171A14;resize:vertical"></textarea>
+        </label>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Ime
+            <input type="text" style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.4 'Source Sans 3',sans-serif;color:#171A14">
+          </label>
+          <label style="display:grid;gap:8px;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5A5F52">Email
+            <input type="email" style="border:1px solid #DAD3C2;border-radius:8px;background:#FAF8F3;padding:14px;font:400 17px/1.4 'Source Sans 3',sans-serif;color:#171A14">
+          </label>
+        </div>
+        <label style="display:flex;gap:10px;align-items:flex-start;font:400 15px/1.5 'Source Sans 3',sans-serif;color:#5A5F52"><input type="checkbox"> Ova recenzija je zasnovana na mom iskustvu i moje je iskreno mišljenje.</label>
+        <button type="submit" style="background:#C79A1F;border:0;color:#171A14;font:600 13px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:18px;cursor:pointer;border-radius:8px" style-hover="background:#171A14;color:#F7F4EA">Pošalji recenziju</button>
+      </form>
+      <div style="display:grid;gap:18px">
+        <article style="border-left:3px solid #C79A1F;background:#FFF;border-top:1px solid #E2DCCB;border-right:1px solid #E2DCCB;border-bottom:1px solid #E2DCCB;padding:26px 28px">
+          <div style="color:#C79A1F;letter-spacing:.2em">★★★★★</div>
+          <h3 style="margin:12px 0 10px;font:600 20px/1.3 Oswald,sans-serif;text-transform:uppercase">Preporuke!</h3>
+          <p style="margin:0 0 14px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Odgovorni i organizovani na stazi. Poseduju i znanje i iskustvo. Svaka akcija uzbudljiva i zabavna. Najviše od svega prijatelji.</p>
+          <div style="font:500 14px/1 'IBM Plex Mono',monospace;color:#8B8571">George · maj 2026</div>
+        </article>
+        <article style="border-left:3px solid #C79A1F;background:#FFF;border-top:1px solid #E2DCCB;border-right:1px solid #E2DCCB;border-bottom:1px solid #E2DCCB;padding:26px 28px">
+          <div style="color:#C79A1F;letter-spacing:.2em">★★★★★</div>
+          <h3 style="margin:12px 0 10px;font:600 20px/1.3 Oswald,sans-serif;text-transform:uppercase">Preporuka</h3>
+          <p style="margin:0 0 14px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Odlična ekipa, dobra organizacija i uvek lepa atmosfera. Planinarenje sa njima je pravo zadovoljstvo. Preporuka!</p>
+          <div style="font:500 14px/1 'IBM Plex Mono',monospace;color:#8B8571">Bojana · mart 2026</div>
+        </article>
+        <article style="border-left:3px solid #C79A1F;background:#FFF;border-top:1px solid #E2DCCB;border-right:1px solid #E2DCCB;border-bottom:1px solid #E2DCCB;padding:26px 28px">
+          <div style="color:#C79A1F;letter-spacing:.2em">★★★★★</div>
+          <h3 style="margin:12px 0 10px;font:600 20px/1.3 Oswald,sans-serif;text-transform:uppercase">Sve preporuke!</h3>
+          <p style="margin:0 0 14px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Ljubica i Zare su uvek uz nas, i kad mislimo da je nešto previše za nas oni nam dokažu suprotno! Mi nismo samo društvo, mi smo više od društva — mi smo porodica!</p>
+          <div style="font:500 14px/1 'IBM Plex Mono',monospace;color:#8B8571">Biljana Matijević · mart 2026</div>
+        </article>
+        <article style="border-left:3px solid #C79A1F;background:#FFF;border-top:1px solid #E2DCCB;border-right:1px solid #E2DCCB;border-bottom:1px solid #E2DCCB;padding:26px 28px">
+          <div style="color:#C79A1F;letter-spacing:.2em">★★★★★</div>
+          <h3 style="margin:12px 0 10px;font:600 20px/1.3 Oswald,sans-serif;text-transform:uppercase">Odlični vodiči</h3>
+          <p style="margin:0 0 14px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Stručni, predani i brižni vodiči, divni ljudi, predobre akcije i uvek dobro druženje i smeh. MontaNIKA će uvek biti moj izbor ispred svih ostalih.</p>
+          <div style="font:500 14px/1 'IBM Plex Mono',monospace;color:#8B8571">Ana Marija Jovanović · mart 2026</div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isStatute }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="padding:150px 32px 50px;background:#171A14;color:#F7F4EA">
+    <div style="max-width:1240px;margin:0 auto">
+      <h1 style="margin:0;font:700 clamp(36px,5vw,68px)/1.04 Oswald,sans-serif;text-transform:uppercase">Statut i dokumentacija</h1>
+      <p style="margin:16px 0 0;font:400 18px/1.6 'Source Sans 3',sans-serif;color:rgba(247,244,234,.78)">Zvanični dokumenti Planinarskog društva „MontaNIKA” Novi Sad, usvojeni 23.09.2025. godine.</p>
+      <div style="margin-top:30px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#/statut?a=statut-tekst" style="border:1px solid rgba(247,244,234,.4);color:#F7F4EA;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:15px 20px;border-radius:6px" style-hover="background:#C79A1F;color:#171A14;border-color:#C79A1F">Statut</a>
+        <a href="#/statut?a=pravilnik-tekst" style="border:1px solid rgba(247,244,234,.4);color:#F7F4EA;font:500 12px/1 Oswald,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:15px 20px;border-radius:6px" style-hover="background:#C79A1F;color:#171A14;border-color:#C79A1F">Pravilnik o radu društva</a>
+      </div>
+    </div>
+  </section>
+  <section id="statut-tekst" style="padding:80px 32px 40px;scroll-margin-top:96px">
+    <div style="max-width:860px;margin:0 auto">
+      <div style="font:500 12px/1 Oswald,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#A57F13;margin-bottom:16px">Dokument 01</div>
+      <h2 style="margin:0 0 10px;font:700 clamp(28px,3.6vw,46px)/1.08 Oswald,sans-serif;text-transform:uppercase">Statut</h2>
+      <p style="margin:0 0 40px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#5A5F52">Sportsko udruženje Planinarsko društvo „MontaNIKA” · prečišćen tekst, Skupština od 23.09.2025.</p>
+      <article style="border-top:3px solid #C79A1F;padding-top:34px">
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">На основу члана 40. и члана 55. ст. З. тачка 1. Закона о спорту Републике Србије ("Сл. гласник РС", бр. 10/2016) и члана 17. Статута Удружења, Скупштина Спортског удружења ПЛАНИНАРСКО ДРУШТВО „МонтаНИКА” на седници одржаној 23.09.2025. године у Новом Саду усваја</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– Пречишћен текст - СТАТУТA СПОРТСКОГ УДРУЖЕЊА ПЛАНИНАРСКО ДРУШТВО „МонтаНИКА“</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">I. ОПШТЕ ОДРЕДБЕ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 1.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Назив: ПЛАНИНАРСКО ДРУШТВО „МонтаНИКА” (у даљем тексту: Удружење). Скраћени назив: ПД „МонтаНИКА“ Седиште Удружења је у Новом Саду, ул. Гагаринова бр. 12. Удружење је добровољна, самостална, неполитичка и недобитна спортска организација, основана као удружење, ради промоције и развоја планинарства, боравка у природи и здравих стилова живота, организације рекреативних, едукативних и авантуристичких програма (пешачења, кампова, предавања, курсева...), очувања природне и културне баштине кроз акције и пројекте, развоја локалне заједнице и подстицања волонтеризма, сарадње са домаћим и међународним организацијама и институцијама, едукације и подршке младима, женама и осетљивим групама, организације тим билдинг и outdoor програма за правна и физичка лица (фирме, школе, удружења...) у складу са циљевима удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 2.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење има статус спортског удружења и правног лица са правима, обавезама и одговорностима утврђеним законом и овим Статутом. Удружење представља и заступа Председник Удружења, а у његовом одсуству други члан, по овлашћењу Председника. Ради заступања Удружења пред судством и другим државним органима, Председник може овластити друго лице, које испуњава Законом предвиђене услове да заступа Удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 3.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење има печат округлог облика у којем су ћирилицом по ободу уписане речи: СПОРТСКО УДРУЖЕЊЕ ПЛАНИНАРСКО ДРУШТВО, а по средини je исписана реч „МонтаНИКА“. Удружење има лого који се састоји од кружног амблема на црној подлози, у чијем се централном делу налази бела силуета жене са крилима, са подигнутом десном руком у којој држи венац од ловора. Око фигуре, са леве и десне стране, су две гране ловора, на горњем делу круга, изнад фигуре, исписано је латиницом: PLANINARSKO DRUŠTVO, а на доњем делу: „MontaNIKA“. Назив Удружења у визуелним приказима (лого, промотивни материјал) може бити приказан и латиничним писмом, ради визуелног идентитета, али се у званичним документима искључиво користи ћирилично писмо, у складу са Статутом.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 4.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење је члан Планинарског Савеза Србије (у даљем тексту: Савез). Удружење се може удружити у територијалне савезе ради стварања повољнијих услова за развој планинарства, организовања акција удруженим снагама и координација активности. Удружење се може удруживати на интересној или територијалној основи ради остварења заједничких циљева и активности.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 5.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Забрањена је свака непосредна и посредна дискриминација чланова Удружења с обзиром на неко лично својство, статус, опредељење или уверење, у складу са законом. Одредбе општих аката Удружења којима се утврђује или ствара дискриминација не примењују се, а појединачна акта којима се врши дискриминација ништава су. У Удружењу и код чланова Удружења није допуштено кршење слободе и права човека и грађана. Термини којима су у овом Статуту означени положаји, професије, односно занимања, изражени у граматичком мушком роду, подразумевају природни мушки и женски род лица на које се односе.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">II. ЦИЉЕВИ И ЗАДАЦИ УДРУЖЕЊА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 6.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење ће своје циљеве остваривати кроз следеће активности:  Организовање планинарских излета, пешачења, кампова, излета у природи и других активности на отвореном;  Организовање и реализација планинарских тура, рекреативних шетњи, експедиција и успона;  Провођење курсева и радионица из области планинарства, оријентације, безбедности, прве помоћи и еколошке свести;  Ширење знања и подизање свести о вредности планина и природе уопште;  Подстицање развоја квалитетних спортиста у планинарству;  Учешће у акцијама за заштиту и очување природних и културних вредности, као и едукација јавности о значају очувања природе;  Провођење тим билдинг програма и outdoor активности за правна и физичка лица (фирме, школе, удружења);  Размена искустава и сарадња са другим организацијама и институцијама у земљи и иностранству;  Подстицање волонтерског рада кроз организовање еколошких акција и других пројеката који доприносе развоју локалне заједнице;  Програмска подршка младима, женама и другим осетљивим групама у области планинарства, здравих стилова живота и рекреације;  Организација едукативних и рекреативних програма (предавања, радионице, курсеви из области планинарства, екологије, безбедности и прве помоћи);  Сарадња са домаћим и међународним организацијама, јавним институцијама и локалним самоуправама;  Учешће у пројектима од јавног интереса, као и пријављивање на конкурсе и јавне позиве за финансирање програма;  Издавање едукативног импромптивног материјала (штампаног, електронског, мултимедијалног);  Организовање хуманитарних и еколошких акција;  Ангажовање стручних лица (планинарских водича, едукатора, инструктора) за реализацију програма Удружења;  Обављање других послова који су у функцији развоја планинарства, свести и љубави према природи.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 7.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење се бави планинарством као основном граном спорта. Планинарство обухвата све активности и дисциплине које су повезане са кретањем и боравком у природи, као и активностима које подразумевају техничке аспекте планинарства, као што су:  Пешачење,  Планинарење,  Алпинизам,  Спортско пењање,  Високогорство,  Кањонинг,  Планинско трчање,  Планински бициклизам и друге сличне активности. Удружење може развијати и додатне спортске дисциплине које су у складу са циљевима и делатностима планинарства и рекреације.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">Ш. ЧЛАНСТВО У УДРУЖЕЊУ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 8.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Чланом Удружења постаје се учлањењем. Удружење прима појединце у чланство на основу попуњене и потписане изјаве о приступању и заводи их у Књигу чланова у складу са Законом о спорту. Изјаву о приступању, односно учлањењу у Удружење, за малолетно лице које није навршило 14 година, даје малолетно лице, уз приходну писану сагласност родитеља, односно старатеља.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 9.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење води Књигу чланова у складу са Законом о спорту, укључујући и податке о њиховом праву управљања Удружењем. Чланство у Удружењу је добровољно. Чланови Удружења могу бити држављани Републике Србије. Чланови Удружења могу бити и страни држављани-такмичари, тренери и друга лица, која своју активност обављају на територији Републике Србије, на основу других прописа којима се регулише боравак и рад странаца. Чланство у Удружењу се доказује чланском картом и доказом о плаћеној чланарини. Удружење може имати и почасне и помажуће чланове, који не могу бити бирани у органе Удружења и који могу присустовати седницама Скупштине Удружења, али без права гласа.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 10.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Права члана Удружења су:  да учествује у раду Удружења и остваривању његових циљева и програма;  да учествује у доношењу одлука;  да бира и буде биран у органе Удружења;  да буде обавештен о свим активностима Удружења и одлукама његових органа.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 11.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Дужности члана Удружења су:  да ради и да се понаша у складу са Статутом и правилницима Удружења;  да уредно плаћа чланарину;  да чува углед Удружења;  да извршава одлуке органа Удружења;  да пре учешћа на планинарским и такмичарским активностима упозна и укаже на здравствене проблеме и ограничења здравствене способности;  да се придржава планинарске етике и да негује односе међусобне сарадње са другим планинарима, што спада у основне одлике и принципе планинарског покрета;  да током планинарских активности води бригу о очувању и заштити природе;  да се пријави за категоризацију спортиста, одмах пошто испуни услов.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 12.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Чланови Удружења који намерно или из нехата поступе супротно Статуту и другим општим актима Удружења, одлукама органа или овлашћених лица Удружења, или повреде углед Удружења, могу дисциплински одговарати и бити кажњени: 1. интерном опоменом; 2. јавном опоменом; 3. суспензијом; 4. забраном обављања дужности; 5. искључењем из Удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 13.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Чланство у Удружењу престаје:  иступањем, уз попуњавање изјаве о иступању;  неплаћањем чланарине за текућу календарску годину, и  искључењем на основу одлуке надлежног органа Удружења.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">IV. ОРГАНИ УДРУЖЕЊА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 14.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Органи Удружења су: 1. Скупштина; 2. Управни одбор; 3. Надзорни одбор и 4. Председник.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 15.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Чланови органа Удружења одговарају солидарно за штету коју својом одлуком проузрокују Удружењу, ако такву одлуку донесу намерно или крајњом непажњом. За штету из претходног става овог члана, не одговарају чланови, који су били против доношења штетне одлуке или су се уздржали од гласања. Лица овлашћена за заступање и чланови органа Удружења, дужни су да у свом раду избегавају сукоб интереса у складу са Закона о спорту Републике Србије. 1. Скупштина</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 16.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Скупштина је највиши орган Удружења. Седнице Скупштине могу бити редовне и ванредне. Редовне седнице се одржавају једном годииње, а ванредне по потреби.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 17.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Задаци Скупштине су да:  доноси Статут, односно његове измене и допуне;  даје тумачење Статута;  усваја Извештаје о раду органа Удружења;  усваја Извештај о реализацији програма који се финансира из јавних средстава;  доноси програмску оријентацију и планове активности Удружења за наредни период;  доноси Пословник о раду Скупштине;  доноси Правилник о раду Надзорног одбора;  доноси и усваја финансијски извештај и прихвата ревизорски извештај;  бира и опозива председника Удружења и Надзорног одбора, као и саставе Извршног одбора и Надзорног одбора;  именује и разрешава лице овлашћено за заступање Удружења;  одлучује о разрешењу изабраних органа Удружења или њихових чланова, по истеку њихових мандата и у случају кад су поднели оставке;  одлучује о опозиву изабраних органа Удружења или њихових чланова у складу са овим Статутом;  разматра актуелна питања рада Удружења, доноси одлуке и закључке, заузима ставове и даје мишљење и препоруке;  оснива, односно укида фондове и регулише њихов рад и коришћење;  одлучује о отуђивању имовине Удружења;  одлучује о учлањењу Удружења у Планинарски Савез Србије и о удруживању Удружења у савезе на интересном или територијалном принципу;  одлучује о престанку постојања Удружења и другим статусним променама;  обавља и друге послове од интереса за планинарску организацију и Удружење.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 18.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Право учешћа у раду Скупштине и право гласа на Скупштини имају сви чланови Удружења, који су заведени у Књизи чланова, и платили све доспеле чланарине Удружењу, закључно са датумом одржавања Скупштине. Члан Скупштине не може бити особа која:  је члан правних лица која обављају делатност организовања спортских кладионица, као и особа која је то била у последње три године;  није пословно способна;  док је под суспензијом или током трајања изречене дисциплинске мере Удружења. Председник Удружења, чланови Управног и Надзорног одбора имају сва права члана Удружења у Скупштини.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 19.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Редовну седницу Скупштине сазива Председник Удружења на основу одлуке Управног одбора. Седница се заказује писаним путем, најмање 15 дана пре одржавања, са назнаком места одржавања и временом почетка рада, као и са предлогом дневног реда и одговарајућим материјалима. Ванредну седницу сазива Председник Удружења по одлуци Управног одбора, Надзорног одбора или на захтев најмање трећине чланова Удружења, у року од 15 дана од пријема уредног захтева. Председник Удружења може у свако доба сазвати ванредну седницу Скупштине ако то интереси Удружења захтевају. У случају да Председник Удружења не сазове ванредну седницу у предвиђеном року, сазива је Надзорни одбор у року од 10 дана. Ванредна седница Скупштине расправља и одлучује само о питањима због којих је сазвана, осим ако Скупштина не одлучи другачије већином од укупног броја чланова. У случају да се ванредна Скупштина не одржи због недостатка кворума или се не усвоје предлози предлагача, нова ванредна Скупштина се са истим дневним редом не може одржати у наредна три месеца.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 20.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Скупштина пуноправно одлучује када седници присуствује више од половине чланова, са правом гласа. Уколико у заказано време почетка рада Скупштине нема кворума, Скупштина почиње са радом и пуноправно одлучује након 30 минута, ако је присутна једна четвртина чланова. Уколико није испуњен тај услов, Председник у року од 15 дана сазива нову седницу Скупштине, која ће бити одржана у року од 30 дана од дана заказивања. Скупштина доноси одлуке простом већином гласова присутних чланова, јавним гласањем. Одлука Скупштине о усвајању, изменама и допунама Статута, статусним променама, осим престанку постојања Удружења, доноси се већином чласова од укупног броја чланова Скупштине.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 21.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Скупштина јавним гласањем бира Председника Удружења, председника Надзорног одбора, као и саставе Управног и Надзорног одбора. Мандат органа изабраних на Скупштини траје четири године. О свим осталим тачкама дневног реда Скупштина се изјашњава јавним гласањем, осим ако у поједином случају не одлучи другачије.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 22.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Скупштина опозива изабране органе Удружења или чланове органа, на захтев једне трећине чланова Удружења са правом гласа или Надзорног одбора. Ванредну седницу Скупштине која одлучује о опозиву, сазива Председник Удружења најкасније 15 дана од пријема захтева, а ако то не учини у том року, сазива је Надзорни одбор у року од 10 дана, с тим да буде одржана најдуже 30 дана од дана заказивања. Уколико Скупштина опозове Председника Удружења, тиме је опозван цео Управни одбор. У случају из става 3. овог члана Скупштина именује привремени орган управљања Удружењем од најмање 5 чланова, од којих једног овлашћује за заступање Удружења. Иста Скупштина заказује ванредну изборну Скупштину, која мора бити одржана у року од 45 дана од именовања привременог органа, који ће руководити Удружењем до ванредне изборне Скупштине. У случају опозива органа Удружења или њихових чланова, Скупштина бира нове на истој седници.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 23.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Одлуке Скупштине су обавезне за све чланове Удружења, као и за све органе Удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 24.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Седницу Скупштине отвара Председник Удружења. Уколико је седницу сазвао Надзорни одбор, седницу отвара и њоме руководи до избора радних тела председник Надзорног одбора који предлаже и дневни ред. Рад Скупштине Удружења се прецизније уређује Пословником о раду Скупштине, а који усваја Скупштина. 2. Управни одбор</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 25.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Управни одбор руководи радом Удружења на основу Статута, програмске оријентације и осталих одлука и закључака Скупштине. Председник Удружења је истовремено и председник Управног одбора. Управни одбор се састоји од укупно 3 члана. Чланови Управног одбора се бирају из реда чланова Удружења, са листе предложених кандидата.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 26.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Управни одбор сачињавају:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– Председник и</li><li>– два члана.</li></ul>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 27.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Задаци Управног одбора су да:  спроводи одлуке и закључке Скупштине;  предлаже финансијски план и стара се о његовом извршењу;  подноси Скупштини финансијски извештај;  доноси Пословник о раду;  доноси правилнике о раду у појединим областима планинарства на предлог комисија и других радних тела;  управља имовином Удружења;  утврђује и усваја правилнике о раду, програме, планове рада комисија и других радних тела и усваја њихове извештаје о раду;  ставља на увид свим члановима Удружења записник са сваке седнице, чиме обезбеђује потпун увид у свој рад;  образује стална и повремена радна тела: комисије, савете и радне групе;  именује председнике и састав комисија и друге органе и радна тела, у складу са овим Статутом и Пословником о раду Управног одбора, координира и усмерава њихову активност и расправља о њиховом раду;  води рачуна о исправности материјално-финансијског пословања и доноси све одлуке у вези с тим;  одлучује о висини чланарине и висини других новчаних износа;  одлучује о реализацији спортских и планинарских активности и акција, које нису планиране годишњим плановима Удружења;  одлучује о захтевима за образовање секција, огранака и подружница Удружења;  припрема материјале за Скупшину;  на иницијативу органа или чланова Удружења припрема нацрт Статута односно његових измена и допуна и припрема предлог за усвајање на Скупштини;  иницира, организује и сазива семинаре, трибине и предавања;  припрема и организује чланове Удружења за присуство саветовањима, семинарима, течајевима и другим скуповима које организује Савез или друге организације-клубови;  сарађује са Надзорним одбором у смислу придржавања законских и других прописа и одредби Статута и омогућује увид у свој рад;  именује чланове Удружења у органе других организација и институција;  именује представника или представнике у Скупштину Савеза;  разматра и усваја предлог извештаја о раду Удружења, који Председник подноси Скупштини Удружења;  успоставља везу са државним органима, органима локалне самоуправе и другим организацијама, поводом питања која се односе на планинарење, планине и активности у планинама, и сарађује са организацијма и институцијамачији се рад заснива на заштити и очувању природе, и заштити животне и радне средине;  контактира и сарађује са сродним организацијама у земљи и иностранству;  решава и остала питања која не спадају у искључиву надлежност Скупштине Удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 28.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Управни одбор се састаје по потреби, а најмање два пута годишње. Седницу сазива Председник на своју иницијативу или на захтев једне трећине чланова Управног или Надзорног одбора Удружења. Седница се сазива писменим или електронским путем.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 29.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Управни одбор пуноправно одлучује када седници присуствује више од половине чланова. У кворум се не рачунају чланови у оставци или стално одсутни. Стално одсутни чланови су они који су неоправдано изостали са пет седница узастопно. О појединачном питању, изузетно, чланови Управног одбора могу да се изјасне у писаном облику. У случају потребе за хитним доношењем појединачне одлуке, Управни одбор може одржати електронско гласање. Ако се одржава електронско гласање, одлуке су пуноважне ако електронским путем одлуку потврди више од половине чланова Управног одбора. По позиву Председника Управног одбора, на седници могу учествовати и представници Надзорног одбора, без права гласа.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 30.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Начин рада Управног одбора уређује се Пословником о раду.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 31.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Председник Удружења решава хитна питања из надлежности Управног одбора између две седнице, с тим да се о одлукама обавештава Управни одбор на првој наредној седници, који може донете одлуке изменити.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 32.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Чланови Управног одбора могу да поднесу оставку на чланство из личних разлога. Оставка се обавезно подноси у писаној форми. Уколико наступи потреба да се члан Управног одбора замени због личних разлога, неактивности (пет узастопних неоправданих изостанака), дуже болести или смрти, Председник предлаже новог члана и увршћује га у састав Управног одбора, а коначну одлуку доноси Скупштина на првој наредној седници. Мандат новоизабраног члана Управног одбора траје колико и мандат већ изабраних чланова. 3. Надзорни одбор</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 33.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Надзорни одбор се састоји од укупно три члана, председника и два члана, које бира Скупштина Удружења, са мандатом од четири године. Чланови Надзорног одбора се бирају из редова чланова Удружења, са листе предложених кандидата. Чланови Надзорног одбора не могу истовремено бити и чланови других органа Удружења. Надзорни одбор доноси одлуке већином гласова од укупног броја чланова Надзорног одбора. Надзорни одбор доноси Пословник о раду.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 34.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Надзорни одбор надгледа и контролише финансијско-материјaлно пословање Удружења, извршење програма и рад органа у смислу законитости, примене општих аката, одлука и закључака Скупштине, Управног одбора и других органа Удружења. Надзорни одбор између две Скупштине даје мишљење о значењу појединих одредби Статута Удружења, а коначно тумачење даје прва наредна седница Скупштине Удружења. Сви органи Удружења обавезни су да Надзорном одбору омогуће увид у свој рад. Председник Удружења је дужан да, на образложен захтев Надзорног одбора, сазове састанак Управног одбора са захтеваним дневним редом, у року од двадесет дана од пријема захтева. Надзорни одбор, самостално или на предлог Управног одбора, изриче мере упозорења члановима и органима Удружења у случајевима неиспуњавања статутарних обавеза. У случају битне повреде Статута или закона, које учине органи Удружења, а на предлог Надзорног одбора их не отклоне у задатом року, Надзорни одбор може да иницира или сазове ванредну Скупштину. Надзорни одбор о својим налазима обавештава Управни одбор, а извештај подноси Скупштини. Председник</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 35.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење има Председника. Председник Удружења:  представља и заступа Удружење;  руководи радом Удружења;  одговоран је за рад Удружења и поштовање закона и Статута Удружења;  сазива Скупштину Удружења у складу са Статутом Удружења и Пословником о раду Скупштине;  подноси Скупшпши годишњи извештај о раду Удружења и предлаже програм рада за наредну годину;  остварује планинарску и спортску сарадњу;  руководи финансијама Удружења и финансијски је налогодавац;  предлаже годишњи буџет Удружења;  обавља и друге послове одређене овим Статутом, као и друге послове које му одреди Скупштина. Председник Удружења може бити изабран само из реда оснивача Удружења. Избор председника врши се одлуком Скупштине Удружења, при чему кандидат за Председника мора бити један од физичких или правних лица која су учествовала у оснивању Удружења. Председник је за свој рад одговоран Скупштини Удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 36.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Председник Удружења може у свако доба дати оставку писаним путем. Ако је Председник дао оставку, у обавези је да настави да предузима послове који не трпе одлагање, до именовања новог Председника Удружења, али не дуже од 30 дана од дана регистрације те оставке. У случају подношења оставке од стране Председника, ванредна седница Скупштине се мора одржати у року од 30 дана од регистрације оставке Председника. Ванредна седница Скупштине ће разматрати оставку и у случају њеног усвајања, изабрати новог Председника.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">V. СТРУЧНО-ВАСПИТНИ РАД СА ДЕЦОМ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 37.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Стручно-васпитни рад са децом могу обављати само спортски стручњаци који имају одговарајуће више или високо образовање у области физичког васпитања и спорта или су, поред основне стручне оспособљености, и посебно стручно оспособљени за стручни рад са децом у складу са чланом 26. став 2. и чланом 29. став 1.-4. Закона о спорту. Под децом се сматрају лица која имају мање од 16 година живота.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">VI. АНТИДОПИНГ ПРАВИЛА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 38.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Допинг је у супротности са фундаметалним принципима спорта и медицинском етиком. Допинг је забрањен, како на такмичењима тако и изван такмичења. Под допингом се подразумева свака активност утврђена Законом о спречавању допинга у спорту Републике Србије. Сви чланови Удружења су обавезни да поштују обавезе из Закона о спречавању допинга у спорту Републике Србије. Допинг контролу спроводи Антидопинг агенција Републике Србије, у складу са Законом о спречавању допинга у спору.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">VII. ИНФОРМИСАЊЕ, ПРОПАГАНДА И МАРКЕТИНШКА ДЕЛАТНОСТ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 39.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Рад Удружења је јаван. Удружење се кроз своје активности бави информисањем чланова и јавности, пропагандом планинарства, као и стручном издавачком делатношћу. Удружење, у оквиру активности утврђених Статутом, у циљу упознавања јавности са активностима и радом Удружења, а нарочито у сврху пропагирања планинарства у јавности, може да организује акције маркетиншке природе. Удружење може имати своје гласило и интернет сајт. Чин 40. Представник Удружења који даје податке и информације у вези са радом Удружења одговоран је за њихову тачност. Ставове Удружења, односно његових органа и тела могу да износе и заступају само изабрани и овлашћени чланови Удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 41.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Органи Удружења могу искључити или ограничити јавност на седницама или скупу, када се разматрају документа поверљиве природе.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">VIII. ПЛАНИНАРСКА ОБУКА И УСАВРШАВАЊЕ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 42.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Чланови Удружења имају право и обавезу да стичу планинарска знања и обучавају се у планинарским техничким вештинама. Систем обучавања и усавршавања чланова Удружења садржи планинарске школе, семинаре, течајеве, радионице и друге облике преношења знања и вештина, кроз које полазници имају право и могућност да стичу одговарајућа планинарска стручна звања у постојећим дисциплинама планинарског спорта и планинарских делатности и активности.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 43.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Основна планинарска обука, обавезна је за све чланове Удружења у циљу стицања основних информација и знања о планинама и природи, планинарству, планинарској организацији и организацији Удружења.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">IХ. ИМОВИНА, МАТЕРИЈАЛНА СРЕДСТВА И ПРИХОДИ УДРУЖЕЊА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 44.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Имовину Удружења чине некретнине, покретне ствари, материјална добра и права, и новчана средства којима Удружење управља и располаже. О набавци или отуђивању некретнина, одлучује Скупштина Удружења.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 45.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење остварује приходе од:  чланарине;  средстава из буџета локалне самоуправе намењених осгваривању програма Удружења;  остварених пројеката добијених на конкурсима;  доприноса и помоћи привредних друштава, предузетника, других организација и грађана;  спонзора и донатора;  поклона.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 46.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење управља средствима у складу са Статутом и прописима о материјално- финансијском пословању.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">X. ПРЕСТАНАК РАДА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 47.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Удружење престаје са радом по одлуци Скупштине. За доношење одлуке потребно је да учествује најмање две трећине чланова и да за њу гласа више од две трећине присутних чланова. Удружење престаје са радом и у случајевима утврђеним Законом о спорту.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 48.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">У случају престанка рада Удружења, имовина Удружења која преостане после намирења поверилаца, ће бити распоређена на основу одлуке Скупштине Удружења, а у складу са Законом, на истој седници на којој се донесе одлука о престанку рада Удружења.</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">XI. ПРЕЛАЗНЕ И ЗАВРШНЕ ОДРЕДБЕ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 49.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Сви акти Удружења морају се донети и ускладити са одредбама овог Статута у року од једне године од дана његовог ступања на снагу.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 50.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Овај Статут ступа на снагу осмог дана од дана усвајања на Скупштини Удружења (објављивање на огласној табли Удружења). Председавајући Скупштине: ______________________________ ЉУБИЦА СЕЛАКОВИЋ-БАНДИЋ</p>
+      </article>
+    </div>
+  </section>
+  <section id="pravilnik-tekst" style="padding:60px 32px 110px;scroll-margin-top:96px">
+    <div style="max-width:860px;margin:0 auto;border-top:1px solid #E2DCCB;padding-top:70px">
+      <div style="font:500 12px/1 Oswald,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#A57F13;margin-bottom:16px">Dokument 02</div>
+      <h2 style="margin:0 0 10px;font:700 clamp(28px,3.6vw,46px)/1.08 Oswald,sans-serif;text-transform:uppercase">Pravilnik o radu društva</h2>
+      <p style="margin:0 0 40px;font:400 17px/1.6 'Source Sans 3',sans-serif;color:#5A5F52">Pravilnik o načinu organizovanja i izvođenja planinarskih aktivnosti · Upravni odbor, 23.09.2025.</p>
+      <article style="border-top:3px solid #C79A1F;padding-top:34px">
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">На основу члана 40 Закона о спорту (Сл. гласник РС бр. 10/16) и Статута Планинарско друштва “МонтаНИКА” Нови Сад (у даљем тексту: Друштво), Управни одбор је на Седници одржаној 23. септембра 2025. усвоjио ПРАВИЛНИК О НАЧИНУ ОРГАНИЗОВАЊА И ИЗВОЂЕЊА ПЛАНИНАРСКИХ АКТИВНОСТИ</p>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">I. ОПШТЕ ОДРЕДБЕ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 1.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Циљ и задаци Правилника: Овим правилником се регулишу:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– начин организовања и извођења планинарских активности (у даљем тексту: акције) у Друштву;</li><li>– поступци у припреми и извођењу акција;</li><li>– права и дужности Извршног одбора и планинарских водича (у даљем тексту: водичи) у организацији планинарских акција;</li><li>– прав а и дужности учесника на планинарским акцијама;</li><li>– спречавање и смањење броја повреда и несрећа са тешким и најтежим последицама на акцијама;</li><li>– одговорност свих због чијих је пропуста или грешака, дошло до незгоде или несреће и својим поступцима помаже у могућој истрази или у судском поступку за утврђивање одговорности.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">II. ОРГАНИЗАТОРИ АКЦИЈА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 2.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Организацију планинарских акција у Друштву: рекреативног пешачења, планинарства, високогорских успона, експедиција, еколошких акција, похода, сусрета, табора, логоровања итд.спроводе водичи Друштва.</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– право да предложи организацију планинарске акције има водич са важећом дозволом за рад;</li><li>– Годишњим планом акција, одређују се организатори и водичи за извођење акција; А одобрава га Управни одбор.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">III. ОБАВЕЗА ЛИЦЕНЦИРАНИХ ВОДИЧА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 3</h3>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– лиценцирани водич је по закону о спорту - Спортски стручњак.</li><li>– Друштво је у обавези да са водичима склопи Уговор о ангажовању спортског стручњака.</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Приликом планирања акције, Планинарски водич је дужан да:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– aктивно учествује у раду Друштва у свим његовим ак тивностима;</li><li>– организује акције ван Фрушке горе или да буде водич на акцијама на Фрушкој гори</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">(минимум 10 пута у току године);</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– води акције у домену својих компетенција;</li><li>– се по позиву Друштва и руководиоца Основне планинарске обуке (ОПО) одазове и буде предавач на обуци. Дневницу водича за предавање на обуци (ОПО) одређује Управни одбор.</li><li>– доставља Друштву Детаљан план и програм акције, Најаве (пре акције) и Извештајe са сваке акције, на првом следећем састанку Друштва или слањем на имејл адресу.</li><li>– Планинарски водич је дужан да о изменама планова и допунама било каквих активности које су најављене, благовремено обавести Управни одбор пре саме рализације;</li><li>– сам одређује и организује акцију по правилнику ПСС и правилником Друштва (Правилником о организацији акција);</li><li>– све планиране акције пријављује крајем године представнику планинарских водича за наредну годину;</li><li>– ванредне акције најављује представнику планинарских водича и ако су сви услови испуњени, акција ће бити одобрена по хитно м поступку;</li><li>– о свим проблемима на акцији, Водич је дужан да обавести представника планинарских водича</li><li>– проблем изнесе на састанку Управног одбора - достави Друштву лекарски извештај приликом поступка обнове лиценце (Дозволе за рад);</li><li>– да се упозна са бројем ГСС станице која је најближа месту извођења акције;</li><li>– план и програм могу бити достављени мејлом у електронској или у писаној форми;</li><li>– о Програму акције се чланство упознаје на редовном састанку Друштва;</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">IV. ОБАВЕЗЕ КАНД ИДАТA ЗА СТИЦАЊЕ ЛИЦЕНЦЕ</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 4.</h3>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– кандидати могу бити искључиво активни чланови Друштва (планинари које су своје планинарско искуство стекли активним учешћем на акцијама Друштва, уз лиценциране водиче и честим пешачењем на Фрушкој гори у пратњи искусних водича);</li><li>– да је био помоћни водич минимум 10 пута, уз лиценцираног водича, ван Фрушке горе;</li><li>– да је био вођа на пешачењима на Фрушкој гори, минимум 5 пута у току године;</li><li>– да је био помоћни водич на пешачењима на Фрушкој гори, минимум 10 пута у току године;</li><li>– да приликом стицањања лиценце, у наредне 3 године настави активно да доприноси раду Друштва, по правилнику за лиценциране водиче;</li><li>– кандидате предлажу лиценцирани водичи. Управни одбор одређује кандидате које ће Друштво послати на обуку (према учинку и активностима у Друштву)</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">V. ОРГАНИЗАЦИЈА АКЦИЈА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 5.</h3>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– Управни одбор усваја План акција за наредну г одину</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">(крајем текуће године), на основу предлога водича и чланова друштва.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 6.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Годишњи План акција</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– водичи са важећом дозволом за рад крајем текуће године, пријављују своје акције за наредну годину;</li><li>– План акција може да се мења одлуком Управног одбора.</li></ul>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 7.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Најава акције</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– водич са важећом дозволом за рад најављује акцију</li><li>– најава акције мора да садржи све податке, који учеснику омогућују да процени своју психофизичку припремљеност, обученост и опремљеност, на основу којих одлучује о учествовању;</li><li>– најава се предаје лицу задуженом за ажурирање сајта Друштва, са детаљним програмом акције</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">(ако постоји могућност и пригодне фотографије);</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 8.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Извештај са реализоване акције</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– водич доставља Друштву Извештај са реализоване акције са посебним Финансијским извештајем и Списком учесника акције, најкасније до првог следећег састанка Друштва, а после извођења акције.</li><li>– Извештај мора да садржи све податке прописане правилником Друштва</li><li>– Акције које нису најављене, ни на један начин не могу се уврстити у Годишњи извештај Друштва.</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Формирање котизације : Водич формира котизацију на следећи начин: 1. На основу захтевности акције се одређује број учесника и број помоћних водича. a. водич има права да ангажује једног или више помоћних водича и локалног водича . Помоћни водич је водич са планинарском лиценцом и дозволом за рад. По потреби може да ангажује и искусног планинара који има улогу помоћника за стицање искуства за будуће школовање за водича. 2. Трошкови превоза по учеснику се добијају дељењем укупних трошкова превоза са бројем учесника + за Водича и помоћника водича (водич са лиценцом) . Са превозником се потписује уговор за сваку акцију посебно или са истим превозником на годину дана. Уговором се дефинишу обавезе између потписника. Списак путника сачињава превозник. Водич сачињава свој списак чланова који иду на акцију са свим предвиђеним подацима, оверава списак учесник акције у Друштву у два примерка и пре одласка на акцију - један оверен примерак оставља Друштву. Уколико се као превоз користи услуга приватних возила (сопствени превоз), тада учесници акције превоз плаћају на лицу места уз заједничке трошкове а водич помаже око органиѕације сопствених возила. Тај износ не улази у котизацију. 3. Трошкови смештаја : Водич је дужан да од власника смештаја, затражи могућност добијања предрачуна и уплате преко рачуна. Уколико власник не жели да уплата иде преко рачуна, тада плаћање иде на лицу места за сваког учесника, те тај део трошкова не улазу у цену котизације већ у заједничке трошкове које се плаћају делом приликом резервације смештаја а делом на лицу места. У трошкове се урачунавају и износи ноћења водича, помоћног водича , возача и локалног водича (ако је ангажован). 4. Трошкови исхране се плаћују на исти начин, као и трошкови с мештаја; 5. У трошкове се урачунавају и износи исхране Водича и Помоћног водича , возача и локалног водича (ако је ангажован) . 6. Трошкови улазница се плаћају на лицу места. 7. Допринос Друштву: Сваки водич има права да остави допринос Друштву по сопственој жељу. Сабирањем свих планираних трошкова, са износима за допринос Друштва, дневница водича и помоћног водича, хонорар добија се коначни износ који уплаћује сваки учесник. Водич је одговорно лице и потписник акције. Водич има права да обезбеди трошкове превоза, смештаја и исхране за помоћног водича (водич са лиценцом) и договорени хонорар , док помоћник (планинар без лиценце) нема права на хонорар , а о трошковима акције одлучује водич колико ће бити покривен у односу на број пријављених учесника. 9. Трошкови локалног водича се дели на све учеснике и они не у лазе у цену котизације. Обрачун: Kотизација за учешће се мора уплатити на рачун Друштва пре одласка на акцију Друштво издаје фискални рачун за сваког учесника, а Водич је у обавез и да их достави свакоме. Након плаћања свих приспелих фактура, врши се обрачу дневница и износа висине хонорара за исплату Водича. Исплата се врши по завршртку сваке акције. За финансирање заједничких потреба у Друштву, Водичи су дужни да део новчаних средстава оставе на рачун Друштву у виду донације - регулисано Уговором о донацији (до 100.000 динара на годишњем нивоу).</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 9.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Програм акције Програм акције мора бити написан на важећем меморандуму Друштва и мора да садржи следеће:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– назив акције;</li><li>– назив организатора акције;</li><li>– време и место поласка;</li><li>– време и место повратка;</li><li>– циљ акције (назив планине на коју се врши успон, са називима врхова и њиховим висинама)</li><li>– маршрута (траса кретања са сатницом, висинском разликом при пењању и при спуштању,</li><li>– опис техничке и кондиционе тежине деонице, природне, историјске и друге знаменитости и слично);</li><li>– начин превоза (превозноа средства, успутни одмори, долазак на одредиште и очекивано време повратка);</li><li>– начин исхране;</li><li>– врста смештаја за ноћење;</li><li>– начин пријаве (електронским путем или код водича, планирани број и структура учесника);</li><li>– потребна планинарска опрема;</li><li>– котизација (наводе се врсте услуга) организациони трошкови, порези и доприноси, допринос за Друштво;</li><li>– напомена о сопственој одговорности учесника акције;</li><li>– име и презиме водича са навођењем категорије и броја важеће дозволе за рад.</li></ul>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 1 0.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Водич је дужан да:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– се придржава објављеног програма акције (промена је могућа само због више силе, тј.</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">недовољног броја учесника, временских непогода, непредвидивих препрека на терену, болести и слично);</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– сачини списак учесника, да упише број планинарске маркице, као и да провери да ли је чланарина плаћена за текућу годину;</li><li>– по реализованој акцији, на првом следећем састанку Друштва поднесе кратак писани извештај;</li><li>– водич акције има право да своје трошкове и трошкове помоћног водича (превоз, смештај и исхрана) пренесе на учеснике акције.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">VI. ПРАВА, ДУЖНОСТИ И ОДГОВОРНОСТИ ВОДИЧА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 1 1.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Водич има право и дужност да:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– ангажује локалног водича са терена на који води групу;</li><li>– ангажује додатни превоз;</li><li>– ангажује превоз приватним возилима;</li><li>– пре поласка на пешачке туре или успон, непосредно или преко својих помоћника, утврди кондициону, психофизичку спремност и опремљеност учесника акције (лицима која нису кондиционо, психофизички спремна и неадекватно опремљена, водич има дискреционо право да не дозволи учешће на акцији);</li><li>– учесника за кога сматра да није спреман за одређену стазу, због недостатка одговарајуће опреме или физичке способности, остави у аутобусу, кампу или планинарском дому;</li><li>– се стара о мерама безбедности учесника акције (да одабере одговарајућу маршруту, примени п отребне мере предострожности, одреди помоћног водича или искусног планинара за помоћника који ће ићи на зачељу колоне, обезбеди прву помоћ, средства везе и слично);</li><li>– се на излету понаша спортски и морално (помаже слабијима од себе, брине о заштити природе, не користи алкохол и друга опојна средства и слично);</li><li>– брине о лицима која из било којих разлога не могу да наставе акцију и настоји да их доведе до превозног средства;</li><li>– упозори учесника акције који се не понаша у складу са правилником, да га због своје одговорности пред законом, може искључити из активности због лошег понашања (ако и после друге опомене учесник акције не поштује захтеве, водич га јавно опомиње пред групом и тиме скида одговорност за његово понашање и кретање на терену); У случају грубог кршења правилника о безбедности и дужности учесника на акцији, водич има права да га потпуно искључи са акције (посебно у условима ван Фрушке горе) , пошаље кући и то без новчане надокнаде, обавести Управни одбор о искључивање из Друштва или за учеснике који нису чланови овог Дрштва добиће се забрана учешћа на свим даљим активностима Друштва и у писаној форми ће бити обавештено матично Дрштво тог учесника. Под грубим кршењем правилника се подразумева: свако непоштовањe водича</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">(и/или помоћног водича ) - све одлуке водича које се односе на безбедност, реализацију и промену плана акције, забрану настављање акције за учесника за кога водич сматра да није спреман (физички или ментално) , да нема адекватну опрему, да угрожава здравље и безбедност себе и осталих учесника акције, свако вређање и омаложавање водича, помоћног водича, Друштва, учесника акције. Непоштовање правила кретања на стази и одлажење свесно и намерно испред водича, искључивање из групе без најаве и дозволе водича и помоћног водича. Не пружање помоћи сваком учеснику коме је помоћ потребна. Конзумирање алкохола на стази. Одсуство сарадње са водичем , помоћним водичем и учесницима акције.</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– За учеснике који нису чланови Друштва , правила понашања на акцијама су иста.</li><li>– За помоћног водича и помоћника на акцији, правила понашања на акцијама су иста.</li><li>– известити Управни одбор о проблемима са неким учесницима акције и осталим проблемима;</li><li>– за безбедност извођења акције у складу са Правилником о безбедности и одговорности у извођењу планинарских активности Планинарског Савеза Србије;</li><li>– за спровођење одредби овог Правилника.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">VII. ДУЖНОСТИ И ПРАВА УЧЕСНИКА АКЦИЈА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 1 2.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Основни услови за учествовање на акцији Учесник акције, пре пријављивања, дужан је да процени да ли врста и тежина акције одговарају његовој физичкој, психичкој припремљености и здравственом стању, искуству и опремљености. Уколико су сви критеријуми испуњени, учесник се пријављује водичу, разјашњавајући са њим све што му није јасно из програма. Учесник акције је сваки планинар (са плаћеном чланарином и обављеним лекарским прегледом за текућу годину), који се након упознавања са програмом - својом вољом определио за учешће на акцији. Након пријаве на акцију и плаћањем котизације, учесник је прихватио и пристао на све услове акције које су написане у плану акције.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 1 3.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Учесник акције треба да буде обавештен о:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– терену на којем се акција изводи;</li><li>– тежини акције (физичка и техничка захтевност);</li><li>– програму акције;</li><li>– правилима понашања у планини и објектима.</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Као и да је:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– обучен (едукован) према одговарајућем програму ПСС или иностраном програму који признаје ПСС;</li><li>– психофизички припремљен;</li><li>– опремљен одговарајућом обућом, одећом, опремом и снабдевен храном, водом средствима прве помоћи.</li></ul>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 1 4.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Учесник планинарске акције је дужан да:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– (процењујући своје физичке и здравствене могућности) се благовремено пријави и уплати потребну аконтацију, уз показивање планинарске картице са плаћеном чланарином за текућу годину</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">(или ако је почетник да то саопшти организатору приликом пријаве за акцију), у случају отказивања нађе адекватну замену, као и да се придржава упутства Водича и организат ора акције;</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– да се понаша спортски и морално (помаже слабијем од себе, брине о заштити природе, не користи алкохол и друга опојна средства и слично);</li><li>– својим кретањем и понашањем не угрожава себе и остале учеснике (не иде испред водича, не претиче колону, не руши камење, не прави неотребне паузе и задржавања , пристојно комуницира са водичем, помоћним водичем и свим учесницима акције (без вређања, омаложавања и говора мржње) и слично,</li><li>– чува углед Друштва;</li><li>– поштује све одлуке, процене и промене које водич донесе на лицу места</li><li>– без опирања и у беђивања прекида успон, кретање , акцију ако себи и другима угрожава здравље и безбедност , а водич то процени и саопшти му.</li><li>– на акцију обавезно носи своју планинарску картицу, здравствену картицу и лична документа.</li></ul>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 15.</h3>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– учесник акције је одговоран за своје поступке.</li><li>– сваки пунолетан учесник акције иде на своју сопствену одговорност, а за малолетна лица која учествују на акцијама, одговорност сноси лице које га је пријавило и које га води.</li><li>– приликом учлањења или обнављањем чланарине, сваки члан је у обавези да буде обавештен, пажљиво прочита правилник о понашању и права водича и учесника на акцији, да</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">(потпише) сагласност о поштовању правилника. У случају кршења правилника о понашању на акцијама, водич ће обавестити Извршни одбор и Веће части.</p>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 16.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Учесник планинарске акције има право да:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– по обављеној акцији, све своје примедбе и уочене неправилности у писаној форми достави Управном одбору,</li><li>– на редовном састанку изнесе лична или групна запажања о изведеној акцији.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">VIII. ТЕХНИЧКА ОПРЕМА ДРУШТВА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 17.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Изнајмљивање опреме:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– сва опрема је намењена искључиво потребама активностима Друштва;</li><li>– опрему могу користити водичи, планинари који иду на акције Друштва; Чланови Друштва коришћење техничке опреме не плаћају :</li><li>– кацига ,појас, гуртна, карабинер, дерезе, цепин, ферата сет Учесници акције који нису чланови Друштва, плаћају донацију у вредности од 2000 дин за куповину додатне опреме</li><li>– чланови који користе опрему су дужни да исту врате у исправном стању. У случају губљења или оштећења, дужни су да надокнаде тај део опреме у целости;</li><li>– опрема се не може изнајмљивати нити давати члановима, за акције које нису у Годишњем програму Друштва;</li><li>– Водич је одговаран за безбедност и сигурност коришћења опреме. Мора да преконтролише и пријави евентуална оштећења, приликом враћања исте.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">IX. KРШЕЊЕ ПРАВИЛНИ КА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 18.</h3>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">У случају непоштовања Правилника:</p>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– лиценцираним Планинарским водичима се неће продужити Уговор о ангажовању за наредну годину, и неће имати право на добијање Водичке маркице</li><li>– Лиценцирани Планинарски водич је дужан да у целости рефундира финансијска средства, које је Друштво издвојило за његову обуку.</li><li>– Учесници акције ће бити предати Управном одбору ради евентуалног искључивања из Друштва због грубог кршења правилника о понашању на акцијама.</li><li>– Овај правилник и правила понашања важе и могу се применити на акцијама и на Фрушкој гори и ван Фрушке горе.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">X. ТУМАЧЕЊЕ ПРАВИЛНИКА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 19.</h3>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– тумачење овог Правилника је у надлежности Управног одбора Друштва.</li></ul>
+        <h2 style="margin:52px 0 20px;font:600 clamp(22px,2.6vw,30px)/1.2 Oswald,sans-serif;text-transform:uppercase;color:#171A14;border-bottom:1px solid #E2DCCB;padding-bottom:12px">XI. СТУПАЊЕ НА СНАГУ И ПРИМЕНА</h2>
+        <h3 style="margin:30px 0 12px;font:600 19px/1.3 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#A57F13">Члан 20.</h3>
+        <ul style="margin:0 0 16px;padding-left:0;list-style:none;display:grid;gap:10px;font:400 17px/1.7 'Source Sans 3',sans-serif;color:#3C4237"><li>– овај Правилник ступа на снагу даном усвајања на Управном одбору, а чланови Друштва се на првом наредном састанку упознају са одредбама Правилника.</li><li>– по ступању на снагу, текст овог Правилника се објављује на интернет страници Друштва.</li><li>– За све што није предвиђено овим правилником, важе одредбе Правилника о безбедном извођењу планинарских активности ПСС.</li></ul>
+        <p style="font:400 17px/1.75 'Source Sans 3',sans-serif;color:#3C4237;margin:0 0 14px">Председник Друштва Љубица Селаковић Бандић</p>
+      </article>
+      <div style="margin-top:46px;padding:26px 28px;background:#F1EEE4;font:400 16px/1.7 'Source Sans 3',sans-serif;color:#3C4237">Gagarinova 12, 21000 Novi Sad · MB: 28758260 · PIB: 115203377 · TR: 265-7570310000737-20 · <a href="mailto:info@montanika.rs">info@montanika.rs</a></div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<footer style="background:#4A4D48;color:#F2F3F1;padding:70px 32px 40px;border-top:1px solid #5C5F5A">
+  <div style="max-width:1240px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(242,243,241,.18)">
+      <div>
+        <a href="#/" onClick="{{ goHomeTop }}" title="Naslovna strana" style="display:inline-block;margin-bottom:20px;cursor:pointer;transition:opacity .2s" style-hover="opacity:.72"><img src="https://montanika.rs/wp-content/uploads/2025/08/cropped-logoravni-removebg-preview-e1755036119190.png" alt="PD MontaNIKA — naslovna strana" style="height:58px;width:auto;display:block"></a>
+        <p style="margin:0 0 18px;font:400 16px/1.7 'Source Sans 3',sans-serif;color:rgba(242,243,241,.72)">Planinarsko društvo „MontaNIKA” Novi Sad<br>info@montanika.rs</p>
+        <div style="font:400 16px/1.8 'Source Sans 3',sans-serif;color:rgba(242,243,241,.72)">Tel. <a href="tel:+381631289477" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">063/128-94-77</a><br>Tel. <a href="tel:+381644222237" style="color:#A57F13;font-weight:600" style-hover="color:#171A14">064/422-22-37</a></div>
+        <div style="margin-top:16px;font:400 14px/1.7 'IBM Plex Mono',monospace;color:rgba(242,243,241,.6)">Gagarinova 12, 21000 Novi Sad<br>MB: 28758260 · PIB: 115203377</div>
+      </div>
+      <div style="display:grid;gap:12px;align-content:start">
+        <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#E0BC55;margin-bottom:6px">Sajt</div>
+        <a href="#/" onClick="{{ goHomeTop }}" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Naslovna</a>
+        <a href="#/?a=kako-smo-nastali" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">O nama</a>
+        <a href="#/?a=nasi-vodici" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Naši vodiči</a>
+        <a href="#/?a=mi-u-medijima" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Mi u medijima</a>
+      </div>
+      <div style="display:grid;gap:12px;align-content:start">
+        <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#E0BC55;margin-bottom:6px">Akcije</div>
+        <a href="#/godisnji-plan" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Godišnji plan akcija</a>
+        <a href="#/?a=aktuelne-akcije" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Sledeće akcije</a>
+        <a href="#/obavestenja" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Obaveštenja</a>
+        <a href="#/galerija" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Galerija</a>
+      </div>
+      <div style="display:grid;gap:12px;align-content:start">
+        <div style="font:600 12px/1 Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#E0BC55;margin-bottom:6px">Društvo</div>
+        <a href="#/postani-clan" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Postani član</a>
+        <a href="#/statut" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Statut i dokumentacija</a>
+        <a href="#/kontakt" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Kontakt</a>
+        <a href="#/utisci" style="color:rgba(242,243,241,.85);font:400 16px/1.3 'Source Sans 3',sans-serif" style-hover="color:#E0BC55">Napiši utiske</a>
+      </div>
+    </div>
+    <div style="padding-top:28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center">
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a href="https://www.facebook.com/share/g/1AJ759TPcL/" target="_blank" rel="noopener" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;overflow:hidden;background:#FFF;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.28)"><img src="images/facebook.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;display:block"></a>
+        <a href="https://www.instagram.com/pdmontanika/" target="_blank" rel="noopener" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;overflow:hidden;background:#FFF;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.28)"><img src="images/instagram.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;display:block"></a>
+        <a href="https://invite.viber.com/?g2=AQBr9qAj1MiHKFJ9b7H2fnfUiMkQcGag6ifg1bBSuuPWAhX0Xf%2FpuRqcljYsVesU" target="_blank" rel="noopener" title="Pridruži se Viber zajednici" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;overflow:hidden;background:#FFF;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.28)"><img src="images/viber.png" alt="Viber" style="width:100%;height:100%;object-fit:cover;display:block"></a>
+      </div>
+      <div style="font:400 14px/1 'IBM Plex Mono',monospace;color:rgba(242,243,241,.5)">© 2026 PD MontaNIKA · Sva prava zadržana</div>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeZoom }}" style="position:fixed;inset:0;z-index:200;background:rgba(10,12,8,.94);display:flex;align-items:center;justify-content:center;padding:clamp(56px,9vw,70px) clamp(16px,7vw,90px);animation:mn-fade .2s ease">
+    <button onClick="{{ closeZoom }}" style="position:absolute;top:22px;right:26px;width:48px;height:48px;border-radius:50%;background:transparent;border:1px solid rgba(247,244,234,.35);color:#F7F4EA;font-size:20px;cursor:pointer" style-hover="background:#C79A1F;color:#171A14">✕</button>
+    <button onClick="{{ zoomPrev }}" style="position:absolute;left:22px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;background:transparent;border:1px solid rgba(247,244,234,.35);color:#F7F4EA;font-size:22px;cursor:pointer" style-hover="background:#C79A1F;color:#171A14">‹</button>
+    <button onClick="{{ zoomNext }}" style="position:absolute;right:22px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;background:transparent;border:1px solid rgba(247,244,234,.35);color:#F7F4EA;font-size:22px;cursor:pointer" style-hover="background:#C79A1F;color:#171A14">›</button>
+    <div style="width:100%;max-width:1100px;max-height:100%;display:flex;flex-direction:column;gap:16px;align-items:center">
+      {{ zoomContent }}
+      <div style="font:500 13px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,234,.6)">{{ zoomCounter }}</div>
+    </div>
+  </div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;guidesImageSide&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;levo&quot;,&quot;desno&quot;],&quot;default&quot;:&quot;levo&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Naši vodiči&quot;},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;#C79A1F&quot;,&quot;#B4762A&quot;,&quot;#4C6B3C&quot;,&quot;#1F5E6E&quot;],&quot;default&quot;:&quot;#C79A1F&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Boje&quot;}}">
+class Component extends DCLogic {
+  state = { route: '/', anchor: '', solid: 0, menu: null, zoom: null, mobile: false, drawer: false, sub: null };
+
+  componentDidMount() {
+    this._onHash = () => this.readHash();
+    this._onScroll = () => {
+      const s = window.scrollY > 90 ? 1 : 0;
+      if (s !== this.state.solid) this.setState({ solid: s });
+    };
+    this._onKey = (e) => {
+      if (!this.state.zoom) return;
+      if (e.key === 'Escape') this.setState({ zoom: null });
+      if (e.key === 'ArrowRight') this.stepZoom(1);
+      if (e.key === 'ArrowLeft') this.stepZoom(-1);
+    };
+    this._onResize = () => {
+      const m = window.innerWidth <= 900;
+      if (m !== this.state.mobile) this.setState({ mobile: m, drawer: false });
+    };
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+    window.addEventListener('hashchange', this._onHash);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('keydown', this._onKey);
+    this.readHash();
+    this._onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('hashchange', this._onHash);
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('keydown', this._onKey);
+  }
+
+  readHash() {
+    const raw = (window.location.hash || '#/').replace(/^#/, '');
+    const [path, query] = raw.split('?');
+    const anchor = query && query.startsWith('a=') ? query.slice(2) : '';
+    const route = path || '/';
+    const changed = route !== this.state.route;
+    this.setState({ route, anchor, menu: null, zoom: null, drawer: false }, () => {
+      if (anchor) {
+        setTimeout(() => {
+          const el = document.getElementById(anchor);
+          if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+        }, 90);
+      } else {
+        window.scrollTo({ top: 0, behavior: changed ? 'auto' : 'smooth' });
+      }
+    });
+  }
+
+  stepZoom(dir) {
+    const z = this.state.zoom;
+    if (!z) return;
+    const i = (z.i + dir + z.items.length) % z.items.length;
+    this.setState({ zoom: { items: z.items, i } });
+  }
+
+  renderVals() {
+    const r = this.state.route;
+    const isHome = r === '/' || r === '';
+    const onHeroDark = isHome && !this.state.solid;
+    const actions = {
+      camino: ['Camino de Santiago', 'Najuspešnija akcija 2023. godine po oceni Planinarskog saveza Srbije'],
+      rtanj: ['Romantični Rtanj', 'Naša tradicionalna akcija na najprepoznatljivijoj srpskoj piramidi'],
+      madeira: ['Madeira', 'Levade, okeanski vrhovi i staze iznad oblaka'],
+      tenerife: ['Tenerife', 'Uspon na Teide i vulkanski pejzaži Kanara']
+    };
+    const slug = r.startsWith('/akcija/') ? r.slice(8) : null;
+    const act = actions[slug] || ['Akcija', 'Opis akcije'];
+    const z = this.state.zoom;
+
+    const scrollBy = (btn, dir) => {
+      const wrap = btn.closest('section') || document;
+      const track = btn.closest('[data-carousel]') ? btn.closest('[data-carousel]').querySelector('[data-track]') : wrap.querySelector('[data-track]');
+      if (!track) return;
+      const kid = track.firstElementChild;
+      const cs = getComputedStyle(track);
+      const gap = parseFloat(cs.columnGap || cs.gap || 0) || 0;
+      const slide = kid ? kid.getBoundingClientRect().width + gap : track.clientWidth;
+      const dist = dir * slide * Math.max(1, Math.floor((track.clientWidth * 0.95) / slide));
+      const from = track.scrollLeft;
+      const max = track.scrollWidth - track.clientWidth;
+      let target = Math.max(0, Math.min(from + dist, max));
+      if (target < max) target = Math.round(target / slide) * slide;
+      const prevSnap = track.style.scrollSnapType;
+      track.style.scrollSnapType = 'none';
+      const t0 = performance.now();
+      const dur = 420;
+      const step = (now) => {
+        const p = Math.min(1, (now - t0) / dur);
+        const e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        track.scrollLeft = from + (target - from) * e;
+        if (p < 1) { requestAnimationFrame(step); return; }
+        track.scrollLeft = target;
+        track.style.scrollSnapType = prevSnap;
+      };
+      requestAnimationFrame(step);
+    };
+
+    return {
+      isHome,
+      isAction: !!slug,
+      isPlan: r === '/godisnji-plan',
+      isNotices: r === '/obavestenja',
+      isMember: r === '/postani-clan',
+      isExam: r === '/pregled',
+      isGallery: r === '/galerija',
+      isContact: r === '/kontakt',
+      isReviews: r === '/utisci',
+      isStatute: r === '/statut',
+      actionTitle: act[0],
+      actionSubtitle: act[1],
+      navSolid: onHeroDark ? 0 : 1,
+      navFg: onHeroDark ? '#FFFFFF' : '#171A14',
+      guideImgOrder: (this.props.guidesImageSide || 'levo') === 'levo' ? 0 : 2,
+      isMobile: this.state.mobile,
+      isDesktop: !this.state.mobile,
+      drawerOpen: this.state.drawer,
+      toggleDrawer: () => this.setState((st) => ({ drawer: !st.drawer })),
+      subAboutOpen: this.state.sub === 'about',
+      subActionsOpen: this.state.sub === 'actions',
+      subAboutArrow: this.state.sub === 'about' ? '▲' : '▼',
+      subActionsArrow: this.state.sub === 'actions' ? '▲' : '▼',
+      toggleSubAbout: (e) => { e.preventDefault(); this.setState((st) => ({ sub: st.sub === 'about' ? null : 'about' })); },
+      toggleSubActions: (e) => { e.preventDefault(); this.setState((st) => ({ sub: st.sub === 'actions' ? null : 'actions' })); },
+      closeDrawer: () => this.setState({ drawer: false }),
+      menuAbout: this.state.menu === 'about',
+      menuActions: this.state.menu === 'actions',
+      openAbout: () => this.setState({ menu: 'about' }),
+      openActions: () => this.setState({ menu: 'actions' }),
+      closeMenu: () => this.setState({ menu: null }),
+      goHomeTop: () => {
+        this.setState({ menu: null });
+        if (window.location.hash !== '#/') window.location.hash = '#/';
+        else window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+      scrollPrev: (e) => scrollBy(e.currentTarget, -1),
+      scrollNext: (e) => scrollBy(e.currentTarget, 1),
+      onSubmit: (e) => { e.preventDefault(); window.alert('Demo forma — u živoj verziji poruka se šalje na info@montanika.rs'); },
+      zoomOpen: !!z,
+      zoomCounter: z ? (z.i + 1) + ' / ' + z.items.length : '',
+      zoomContent: z ? React.createElement('div', {
+        style: { width: '100%', height: 'min(72vh, 680px)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#1B1F17', borderRadius: '16px' },
+        dangerouslySetInnerHTML: { __html: z.items[z.i] }
+      }) : null,
+      openZoom: (e) => {
+        const el = e.currentTarget;
+        const group = el.closest('[data-zoom-group]');
+        const nodes = group ? Array.from(group.querySelectorAll('[data-zoom]')) : [el];
+        const html = nodes.map((n) => {
+          const c = n.cloneNode(true);
+          c.style.cursor = 'default';
+          c.style.width = '100%';
+          c.style.height = '100%';
+          c.style.flex = 'none';
+          return c.outerHTML;
+        });
+        this.setState({ zoom: { items: html, i: Math.max(0, nodes.indexOf(el)) } });
+      },
+      zoomPrev: (e) => { e.stopPropagation(); this.stepZoom(-1); },
+      zoomNext: (e) => { e.stopPropagation(); this.stepZoom(1); },
+      closeZoom: (e) => { if (e.target === e.currentTarget || e.currentTarget.tagName === 'BUTTON') this.setState({ zoom: null }); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
