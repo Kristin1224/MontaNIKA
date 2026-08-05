@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>PD MontaNIKA Novi Sad — planinarsko društvo</title>
-<meta name="description" content="Planinarsko društvo „MontaNIKA” Novi Sad — akcije, članarine, godišnji plan, obuke i kontakt. Planina je pravac, MontaNIKA je smer.">
 <link rel="icon" href="https://montanika.rs/wp-content/uploads/2025/08/cropped-logoravni-removebg-preview-e1755036119190.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -316,7 +315,12 @@
               <div style="font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv emisije i medij (upiši)</div>
             </div>
             <div style="flex:0 0 100%;scroll-snap-align:start;display:grid;gap:12px">
-              <video controls="{{ true }}" preload="metadata" playsInline="{{ true }}" style="width:100%;aspect-ratio:16/9;display:block;background:#171A14;border-radius:14px;border:1px solid #DAD3C2"><source src="video-madeira.mp4" type="video/mp4">Vaš pregledač ne podržava prikaz videa.</video>
+              <div style="position:relative;border-radius:14px;overflow:hidden;border:1px solid #DAD3C2;background:#171A14">
+                <video controls="{{ true }}" preload="metadata" playsInline="{{ true }}" style="width:100%;aspect-ratio:16/9;display:block;background:#171A14"><source src="video-madeira.mp4" type="video/mp4">Vaš pregledač ne podržava prikaz videa.</video>
+                <button onClick="{{ playVideo }}" aria-label="Pusti video" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(12,15,10,.28);border:0;cursor:pointer;opacity:{{ videoOverlay }};transition:opacity .25s;pointer-events:{{ videoOverlayPE }}">
+                  <span style="display:flex;align-items:center;justify-content:center;width:76px;height:76px;border-radius:50%;background:#C79A1F;color:#171A14;font-size:26px;padding-left:6px">▶</span>
+                </button>
+              </div>
               <div style="font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Madeira — prilog o našoj akciji</div>
             </div>
             <div style="flex:0 0 100%;scroll-snap-align:start;display:grid;gap:12px">
@@ -1259,6 +1263,17 @@ class Component extends DCLogic {
       navSolid: onHeroDark ? 0 : 1,
       navFg: onHeroDark ? '#FFFFFF' : '#171A14',
       guideImgOrder: (this.props.guidesImageSide || 'levo') === 'levo' ? 0 : 2,
+      videoOverlay: this.state.playing ? 0 : 1,
+      videoOverlayPE: this.state.playing ? 'none' : 'auto',
+      playVideo: (e) => {
+        const wrap = e.currentTarget.parentElement;
+        const v = wrap && wrap.querySelector('video');
+        if (!v) return;
+        v.controls = true;
+        v.play();
+        this.setState({ playing: true });
+        v.addEventListener('pause', () => this.setState({ playing: false }), { once: true });
+      },
       isMobile: this.state.mobile,
       isDesktop: !this.state.mobile,
       drawerOpen: this.state.drawer,
