@@ -316,7 +316,7 @@
               <div style="font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Naziv emisije i medij (upiši)</div>
             </div>
             <div style="flex:0 0 100%;scroll-snap-align:start;display:grid;gap:12px">
-              <video controls preload="metadata" playsInline style="width:100%;aspect-ratio:16/9;display:block;background:#171A14;border-radius:14px;border:1px solid #DAD3C2"><source src="video-madeira.mp4" type="video/mp4">Vaš pregledač ne podržava prikaz videa.</video>
+              <video controls="{{ true }}" preload="metadata" playsInline="{{ true }}" style="width:100%;aspect-ratio:16/9;display:block;background:#171A14;border-radius:14px;border:1px solid #DAD3C2"><source src="video-madeira.mp4" type="video/mp4">Vaš pregledač ne podržava prikaz videa.</video>
               <div style="font:400 16px/1.5 'Source Sans 3',sans-serif;color:#5A5F52">Madeira — prilog o našoj akciji</div>
             </div>
             <div style="flex:0 0 100%;scroll-snap-align:start;display:grid;gap:12px">
@@ -1160,6 +1160,13 @@ class Component extends DCLogic {
     window.addEventListener('keydown', this._onKey);
     this.readHash();
     this._onScroll();
+    setTimeout(() => this.enableVideoControls(), 300);
+  }
+
+  componentDidUpdate() { this.enableVideoControls(); }
+
+  enableVideoControls() {
+    document.querySelectorAll('video').forEach((v) => { if (!v.controls) v.controls = true; });
   }
 
   componentWillUnmount() {
